@@ -26,7 +26,7 @@ header {
 header span {
     margin-left: 3rem;
     font-size: 1.5rem;
-    animation: slide 20s linear infinite;
+    animation: slide 21s linear infinite;
 }
 .buttons {
     width: 70vw;
