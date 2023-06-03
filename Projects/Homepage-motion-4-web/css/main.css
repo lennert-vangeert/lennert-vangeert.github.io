@@ -158,6 +158,9 @@ section a:hover {
   #animated, #ai, #carre, #github, #weeks {
     background-position: center;
   }
+  nav {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 500px) {
