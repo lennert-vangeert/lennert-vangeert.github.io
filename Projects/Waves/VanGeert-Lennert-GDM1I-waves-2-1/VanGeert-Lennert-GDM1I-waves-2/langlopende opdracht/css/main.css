@@ -1,0 +1,255 @@
+body {
+  background-color: black;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 3rem;
+}
+.home {
+  margin: 0;
+  text-shadow: 0.5px 0.5px 2px hsl(0, 0%, 0%);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rem;
+}
+.header-home-player {
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+h1,
+h2,
+h3,
+p,
+li {
+  color: white;
+}
+/*home*/
+.textredbox {
+  text-decoration: none;
+  color: white;
+}
+.readmore-home {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 4rem;
+  padding: 0.6rem;
+}
+.navigation {
+  color: white;
+  text-decoration: none;
+  font-family: quicksand;
+  font-weight: 700;
+}
+.airpod {
+  background-image: url(../image/airpod.png),
+    linear-gradient(hsl(230, 60%, 54%), hsl(304, 52%, 55%), hsl(39, 100%, 72%));
+  height: 50rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed, local;
+  text-align: right;
+  padding: 31rem 48rem 20rem 10rem;
+}
+.redbox {
+  width: 100%;
+  height: 50rem;
+  background-image: url(../image/Guitar.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed, local;
+  text-align: center;
+  padding: 15rem 25% 25rem 25%;
+}
+
+.yellowbox {
+  background-image: url(../gif/waves.gif);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: left;
+  width: 100%;
+  height: 50rem;
+  padding: 20rem 5rem 0 40rem;
+}
+.woman {
+  width: 100%;
+  height: 50rem;
+  background-image: url(../image/woman-listening.png);
+  background-color: hsl(231, 22%, 34%);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 25rem 10rem 0 45rem;
+}
+.subtitle-home {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+}
+.title-home {
+  font-size: 5rem;
+}
+.title-yellowbox-home {
+  font-size: 3rem;
+  color: hsl(39, 90%, 42%);
+}
+.subtitle-yellowbox-home {
+  font-size: 1.5rem;
+  color: hsl(39, 90%, 42%);
+  padding-top: 2rem;
+}
+.title-airpod-home {
+  font-size: 3rem;
+}
+.subtitle-airpod-home {
+  font-size: 1rem;
+  padding-left: 17rem;
+}
+/*player*/
+.title-player {
+  font-size: 5rem;
+  padding-left: 1.5rem;
+}
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: left;
+}
+.playlist-a {
+  font-size: 1rem;
+  width: 12rem;
+  height: 22rem;
+  padding: 1.2rem;
+}
+.playlist-a:hover {
+  background-color: hsl(0, 1%, 50%);
+}
+item {
+  font-size: 75%;
+}
+/*index*/
+.learnmore {
+  color: black;
+}
+.quote {
+  background-color: gray;
+  text-align: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.greta {
+  text-align: right;
+}
+.free {
+  background-color: hsl(230, 60%, 54%);
+  padding: 2rem;
+  color: black;
+  background-image: linear-gradient(hsl(230, 85%, 69%), hsl(230, 60%, 54%));
+  border-radius: 2rem;
+}
+.membership {
+  background-color: hsl(304, 52%, 55%);
+  padding: 2rem;
+  color: black;
+  background-image: linear-gradient(hsl(303, 67%, 84%), hsl(304, 52%, 55%));
+  border-radius: 2rem;
+}
+.blue {
+  color: hsl(230, 60%, 54%);
+}
+.pink {
+  color: hsl(304, 52%, 55%);
+}
+.yellow {
+  color: hsl(39, 100%, 72%);
+}
+h1,
+h2,
+h3 {
+  font-family: "Lato", sans-serif;
+}
+p,
+li {
+  font-family: "Quicksand", sans-serif;
+}
+@media (min-width: 20rem) {
+  body {
+    font-size: 125%;
+  }
+}
+@media (min-width: 50rem) {
+  body {
+    font-size: 150%;
+  }
+}
+.freelist {
+  background-color: hsl(230, 84%, 66%);
+  border-radius: 1rem;
+  background-image: linear-gradient(hsl(230, 85%, 69%), hsl(230, 60%, 54%));
+}
+.membershiplist {
+  background-color: hsl(304, 82%, 70%);
+  border-radius: 1rem;
+  background-image: linear-gradient(hsl(303, 67%, 84%), hsl(304, 52%, 55%));
+}
+.freemembershipcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.link {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+}
+.center {
+  text-align: center;
+  text-decoration: none;
+}
+.black {
+  color: black;
+}
+.pmargin {
+  margin-bottom: 7rem;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding-bottom: 8rem;
+}
+.footer {
+  padding-left: 6rem;
+  padding-bottom: 6rem;
+  padding-right: 9rem;
+}
+li {
+  list-style-image: url(img/iphone.png);
+}
+ul {
+  list-style: none;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+}
+ul li:before {
+  content: "✔";
+}
+section {
+  margin-bottom: 2.5rem;
+}
+/*end*/

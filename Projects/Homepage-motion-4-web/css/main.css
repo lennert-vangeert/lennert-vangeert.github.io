@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+/* main */
+body {
+  font-family: "Bruno Ace", cursive;
+  overflow-y: hidden;
+  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+nav {
+  position: absolute;
+  top: 10vh;
+  left: 1vw;
+  background-color: rgb(83, 82, 82);
+  padding: 15px;
+  border-radius: 1rem;
+  opacity: 75%;
+  display: grid;
+}
+nav a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-weight: 700;
+  margin-top: 5px;
+  transition: 0.4s ease-in-out;
+  opacity: 100%;
+
+}
+nav a:hover {
+  
+  scale: 1.05;
+  transition: 0.4s ease-in-out;
+  color: white;
+  text-shadow: 0 0 30px #ccc;
+}
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+main section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+/* body */
+header {
+  position: absolute;
+  width: 100vw;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 1vh;
+  height: 8vh;
+  font-size: 24px;
+  box-shadow: 0 0 30px #ccc;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px red,
+    0 0 80px red, 0 0 90px red, 0 0 100px red, 0 0 150px red;
+}
+section {
+  height: 100vh;
+  text-align: center;
+}
+section h1 {
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 60px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #ff0000,
+    0 0 82px #ff0000,
+    0 0 92px #ff0000,
+    0 0 102px #ff0000,
+    0 0 151px #ff0000;
+  color: #fff;
+  margin-bottom: 3vh;
+}
+section a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  
+  transition: all 0.3s ease-in-out;
+}
+section a:hover {
+  transform: translate(0, -5px);
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 30px #ccc;
+  text-shadow: none;
+  /* box-shadow: inset 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px red,
+  0 0 80px red, 0 0 90px red, 0 0 100px red, 0 0 150px red; */
+}
+#animated {
+  background-attachment: fixed;
+  background-image: url(../images/arcade.jpg);
+  background-size: cover;
+}
+#ai {
+  background-attachment: fixed;
+  background-image: url(../images/lines.jpg);
+  background-size: cover;
+}
+#carre {
+  background-attachment: fixed;
+  background-image: url(../images/room.jpg);
+  background-size: cover;
+}
+#github {
+  background-attachment: fixed;
+  background-image: url(../images/bars.jpg);
+  background-size: cover;
+}
+#weeks {
+  background-attachment: fixed;
+  background-image: url(../images/heart.jpg);
+  background-size: cover;
+}
+/* mediaquery's */
+@media (max-width: 800px) {
+  .grid {
+    display: grid;
+    justify-content: center;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+  }
+  .grid a {
+    margin: 5px;
+  }
+}
+
+
+
+@media (max-width: 730px) {
+  main {
+    scroll-snap-type: none;
+  }
+  section h1 {
+    font-size: 40px;
+  }
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  /* section a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  } */
+  #animated, #ai, #carre, #github, #weeks {
+    background-position: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid a {
+    padding: 4px;
+}
+}
+
+@media (max-width: 350px) {
+  header {
+    height: 7vh;
+    font-size: 20px;
+  }
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section h1 {
+    font-size: 30px;
+  }
+  section a {
+    font-size: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+/* source https://css-tricks.com/how-to-create-neon-text-with-css/ */

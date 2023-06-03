@@ -1,0 +1,2 @@
+index footer
+media query

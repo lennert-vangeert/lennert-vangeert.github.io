@@ -27,6 +27,7 @@ header span {
     margin-left: 3rem;
     font-size: 1.5rem;
     animation: slide 21s linear infinite;
+    color: #d18383;
 }
 .buttons {
     width: 70vw;
@@ -40,7 +41,6 @@ header span {
     align-items: center;
 }
 .buttons a {
-    font-weight: bold;
     font-size: 1.3rem;
     text-decoration: none;
     color: white;
@@ -48,6 +48,13 @@ header span {
     padding: 8px;
     border-radius: 2rem;
     transition: 0.3s ease-in-out;
+    margin-bottom: 10px;
+    width: 20vw;
+    text-align: center;
+}
+.buttons a span {
+    font-weight: 700;
+    color: red;
 }
 .buttons a:hover {
     background-color: white;

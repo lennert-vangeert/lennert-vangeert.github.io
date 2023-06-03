@@ -1,0 +1,248 @@
+$font-one: "Merienda", cursive;
+$font-two: "Roboto Slab", serif;
+$black: #000000;
+$white: #ffffff;
+
+
+header {
+  h1 {
+    background-color: $black;
+    color: $white;
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 0.5rem;
+    font-family: $font-two;
+    animation: slide-in 1s ease-in-out;
+  }
+}
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: $font-one;
+  background-color: $white;
+  opacity: 20%;
+  animation: slide-in 1s ease-in-out;
+}
+footer {
+  font-family: $font-two;
+  height: 5vh;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+nav {
+  font-family: $font-two;
+  display: grid;
+  position: fixed;
+  animation: slide-in-left 1s ease-in-out;
+  margin-top: 7rem;
+  a {
+    color: $white;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-top: 0.15rem;
+  }
+  a:hover {
+    transform: scale(1.1);
+    transform: translatex(1rem);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: $font-one;
+  color: $white;
+}
+
+
+.left {
+  font-family: $font-two;
+  color: $white;
+  width: 25vw;
+  margin-left: 7vw;
+  margin-top: 30vh;
+  text-shadow: 2px 2px #000000;
+}
+.right {
+  font-family: $font-two;
+  color: $white;
+  width: 25vw;
+  margin-left: 68vw;
+  margin-top: 30vh;
+  text-shadow: 2px 2px #000000;
+}
+
+
+.part-1 {
+  background-image: url(../images/part1.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: $font-one;
+    background-color: $white;
+    opacity: 20%;
+    animation: slide-in 1s ease-in-out;
+  }
+}
+.part-2 {
+  background-image: url(../images/part2.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.part-3 {
+  background-image: url(../images/part3.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.part-4 {
+  background-image: url(../images/part4.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.part-5 {
+  background-image: url(../images/part5.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+}
+
+
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.section1,
+.section2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.section1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/forest.jpg") top center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+  filter: blur(2px);
+}
+.section1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/parallax.png") left;
+  background-size: cover;
+}
+.section1 {
+  .text {
+    top: 10%;
+    transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+  }
+}
+.section2 {
+  background-image: url(../images/bunker.jpg);
+  background-size: cover;
+}
+.text {
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  font-family: $font-one;
+  font-size: 4vw;
+  color: $black;
+  transform: scale(1, 1.1) translate(-50%, 10%);
+}
+
+
+.button-div {
+  text-align: center;
+  margin-top: 3vh;
+}
+.button {
+  font-family: $font-two;
+  text-decoration: none;
+  color: $black;
+  font-size: 2rem;
+  background-color: $white;
+  opacity: 75%;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  border-radius: 1rem;
+}
+.button:hover {
+  opacity: 50%;
+  background-color: red;
+  transition: 0.2s ease-in-out;
+}
+
+
+
+@keyframes slide-in {
+  0% {
+    transform: translatey(-10rem);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translatex(-10rem);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}

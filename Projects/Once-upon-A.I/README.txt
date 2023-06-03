@@ -1,0 +1,1 @@
+Open index.html first, this is the homepage

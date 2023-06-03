@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>A Design System Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="log">
+        <a href="#"><h4>Login</h4></a>
+        <a href="#"><h4>Register</h4></a>
+      </div>
+      <a href="index.html"><h1>The Burger Bazaar</h1></a>
+      <div class="list">
+        <a href="#typography"> <h2>Typography</h2></a>
+        <a href="#colors"><h2>Colors</h2></a>
+        <a href="#buttons"><h2>Buttons</h2></a>
+        <a href="#forms"><h2>Forms</h2></a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <div class="container">
+        <h1 class="h1" id="typography">A Visual Type Scale</h1>
+        <p>
+          Lorem ipsum dolor sit amet <a href="#"></a>, adipisicing
+          elit. Odit autem eum vel sunt dolores est optio! Praesentium fugit aut
+          quod facilis laboriosam dicta ipsa, eaque, repellendus natus iure
+          dignissimos modi. Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Odit autem eum vel sunt dolores est optio! Praesentium fugit aut
+          quod facilis laboriosam dicta ipsa, eaque, repellendus natus iure
+          dignissimos modi.
+        </p>
+        <h2 class="h2">A Visual Type Scale</h2>
+        <blockquote>
+          Lorem ipsum dolor sit amet <a href="#">consectetur</a>, adipisicing
+          elit. Odit autem eum vel sunt dolores est optio! Praesentium fugit aut
+          quod facilis laboriosam dicta ipsa, eaque, repellendus natus iure
+          dignissimos modi. Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Odit autem eum vel sunt dolores est optio! Praesentium fugit aut
+          quod facilis laboriosam dicta ipsa, eaque, repellendus natus iure
+          dignissimos modi.
+        </blockquote>
+        <h3 class="h3">A Visual Type Scale</h3>
+        <h4 class="h4">A Visual Type Scale</h4>
+        <h5 class="h5">A Visual Type Scale</h5>
+        <small>A Visual Type Scale</small>
+      </div>
+      <div class="center">Centered text</div>
+
+      <hr />
+
+      <div class="container">
+        <h2 id="colors">Colors</h2>
+
+        <h3 class="h5">General</h3>
+        <div class="color-grid">
+          <div class="color" style="background: var(--black)"></div>
+          <div class="color" style="background: var(--grey)"></div>
+          <div class="color" style="background: var(--white)"></div>
+        </div>
+
+        <h3 class="h5">Grey</h3>
+        <div class="color-grid">
+          <div class="color" style="background: var(--grey-100)"></div>
+          <div class="color" style="background: var(--grey-200)"></div>
+          <div class="color" style="background: var(--grey-300)"></div>
+          <div class="color" style="background: var(--grey-400)"></div>
+          <div class="color" style="background: var(--grey-500)"></div>
+          <div class="color" style="background: var(--grey-600)"></div>
+          <div class="color" style="background: var(--grey-700)"></div>
+          <div class="color" style="background: var(--grey-800)"></div>
+        </div>
+
+        <h3 class="h5">Primary</h3>
+        <div class="color-grid">
+          <div class="color" style="background-color: var(--primary-100)"></div>
+          <div class="color" style="background-color: var(--primary-200)"></div>
+          <div class="color" style="background-color: var(--primary-300)"></div>
+          <div class="color" style="background-color: var(--primary-400)"></div>
+          <div class="color" style="background-color: var(--primary-main-500)"></div>
+          <div class="color" style="background-color: var(--primary-600)"></div>
+          <div class="color" style="background-color: var(--primary-700)"></div>
+          <div class="color" style="background-color: var(--primary-800)"></div>
+        </div>
+        <h3 class="h5">Green</h3>
+        <div class="color-grid">
+          <div class="color" style="background-color: var(--green-100)"></div>
+          <div class="color" style="background-color: var(--green-200)"></div>
+          <div class="color" style="background-color: var(--green-300)"></div>
+          <div class="color" style="background-color: var(--green-400)"></div>
+          <div class="color" style="background-color: var(--green-500)"></div>
+          <div class="color" style="background-color: var(--green-600)"></div>
+          <div class="color" style="background-color: var(--green-700)"></div>
+          <div class="color" style="background-color: var(--green-800)"></div>
+        </div>
+        <h3 class="h5">Red</h3>
+        <div class="color-grid">
+          <div class="color" style="background-color: var(--red-100)"></div>
+          <div class="color" style="background-color: var(--red-200)"></div>
+          <div class="color" style="background-color: var(--red-300)"></div>
+          <div class="color" style="background-color: var(--red-400)"></div>
+          <div class="color" style="background-color: var(--red-500)"></div>
+          <div class="color" style="background-color: var(--red-600)"></div>
+          <div class="color" style="background-color: var(--red-700)"></div>
+          <div class="color" style="background-color: var(--red-800)"></div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="container">
+        <h2 id="buttons">Buttons</h2>
+
+        <h3>Primary Buttons</h3>
+
+        <button>Primary Button</button>
+        <button disabled>Disabled</button>
+        <button>Button with long text</button>
+        <button>Button &xrarr;</button>
+
+        <br /><br />
+
+        <h3>Secondary Buttons</h3>
+
+        <button class="secondary-button">Secondary Button</button>
+        <button class="secondary-button" disabled>Disabled</button>
+        <button class="secondary-button">
+          Secondary button with long text
+        </button>
+        <button class="secondary-button">Button &xrarr;</button>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2 id="forms">Forms</h2>
+        <form action="#">
+          <div class="flex">
+            <p>
+              <label for="text">Text</label
+              ><input placeholder="Lennert Van Geert" type="text" id="text" />
+            </p>
+            <p>
+              <label for="number">Number</label
+              ><input type="number" id="number" />
+            </p>
+            <p>
+              <label for="email">Email</label><input type="email" id="email" />
+            </p>
+          </div>
+          <p>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea">Default Value</textarea>
+          </p>
+          <button type="submit" class="button-primary-white">Verzenden</button>
+        </form>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2 id="cards">Cards</h2>
+        <div class="card">
+          <h2 class="h3" class="h3">Card</h2>
+          <p>Dit is een card</p>
+        </div>
+        <div class="card register">
+          <h2 class="h3" class="h3">Card</h2>
+          <p>Dit is een card</p>
+        </div>
+
+        <div class="card card--secondary">
+          <h2 class="h3" class="h3">Card</h2>
+          <p>Dit is een card</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2 id="extra">Extra</h2>
+      </div>
+      <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a>
+      <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a>
+      <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a>
+      <hr />
+
+      <h2 id="layout">Layout</h2>
+      <h3>Grid</h3>
+      <div class="outergrid">
+        <div class="grid">
+          <div class="card card--image">
+            <img src="images/california burger.jpg" alt="" />
+            <h4>Dit is een gerecht</h4>
+            <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a> 
+          </div>
+          <div class="card card--image">
+            <img src="images/nacho's.jpg" alt="" />
+            <h4>Dit is een gerecht</h4>
+            <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a> 
+          </div>
+          <div class="card card--image">
+            <img src="images/appeltaart.jpg" alt="" />
+            <h4>Dit is een gerecht</h4>
+            <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a> 
+          </div>
+          <div class="card card--image">
+            <img src="images/ice tea.jpg" alt="" />
+            <h4>Dit is een gerecht</h4>
+           <a href="#"><img class="plus" src="images/plus.png" alt="plus"></a> 
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Split</h3>
+      </div>
+      <div class="container-full">
+        <div class="split">
+          <div class="card">
+            <h3 class="h1">Linkerkant</h3>
+            <p>
+              Lorem ipsum dolor sit amet <a href="#">consectetur</a>,
+              adipisicing elit. Odit autem eum vel sunt dolores est optio!
+              Praesentium fugit aut quod facilis laboriosam dicta ipsa, eaque,
+              repellendus natus iure dignissimos modi. Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Odit autem eum vel sunt
+              dolores est optio! Praesentium fugit aut quod facilis laboriosam
+              dicta ipsa, eaque, repellendus natus iure dignissimos modi.
+            </p>
+            <button>Primary Button</button>
+          </div>
+          <div class="card card--image">
+            <img src="images/california burger.jpg" alt="Bavet" />
+          </div>
+        </div>
+      </div>
+      <h2 id="hero">Hero</h2>
+      <div class="hero">
+        <h1 class="h1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+          corrupti, explicabo autem quod cumque ipsum.
+        </h1>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a href="#"
+          ><h3>
+            The Burger <br />
+            Bazaar
+          </h3></a
+        >
+      </div>
+      <div class="list">
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About us</a></li>
+      </div>
+      <div class="list">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Reserveer</a></li>
+      </div>
+      <label for="email-footer">Nieuwsbrief?</label
+      ><input type="email" placeholder="email" id="email-footer" />
+      <div class="list">
+        <li>0489 65 41 96</li>
+        <li>burgerbazaar@info.com</li>
+      </div>
+      <div class="svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-facebook"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+            fill="white"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-instagram"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+          />
+        </svg>
+      </div>
+    </footer>
+  </body>
+</html>

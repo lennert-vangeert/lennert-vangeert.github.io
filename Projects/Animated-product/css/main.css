@@ -1,0 +1,221 @@
+/* body */
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* header */
+.intro {
+  background-image: url(../Images/audi-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
+  margin: 0;
+  padding: 0;
+  transition: 0.75s;
+}
+.intro:hover {
+  transition: 0.75s;
+  background-image: url(../Images/audi-main2.jpg);
+}
+/* title */
+.title {
+  font-size: 2vw;
+  padding: 2vh 3vw;
+  transition: 0.2s;
+  animation: opening 2s none;
+  text-shadow: 0 0 1rem white;
+  display: inline-block;
+}
+.title:hover {
+  color: gray;
+  transition: 0.2s;
+  font-size: 2.2vw;
+}
+
+/* driving car */
+.car {
+  background-image: url(../Images/topview.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9vw;
+  height: 8vh;
+  animation: car 5s infinite;
+}
+
+/* main image audi */
+.mainImage {
+  background-image: url(../Images/audi-main.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 60vw;
+  height: 65vh;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+.grid {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+/* article */
+article {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  height: 30vh;
+  width: 25vw;
+  border: solid 1px;
+  box-shadow: -0.5rem 0 1rem hsl(240, 1%, 47%);
+  transition: 0.2s;
+}
+article:hover {
+  scale: 1.05;
+  transform: translateY(-2vh);
+}
+.rotating-gradient {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #aaaaaa, #ffffff);
+  animation: gradient 5s infinite;
+}
+
+h2 {
+  font-size: 1.5vw;
+}
+.inner-article {
+  border-radius: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  width: 21vw;
+  margin-left: 2.5vw;
+  margin-top: 2.5vh;
+  border: solid 1px;
+}
+.inner-article-text {
+  text-align: center;
+  padding-top: 1vh;
+}
+ul {
+  font-size: 1.4vw;
+  padding-top: 1vh;
+}
+/* footer */
+footer {
+  background-color: hsl(0, 1%, 14%);
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin-top: 3vh;
+}
+.foot {
+  margin-top: 4vh;
+}
+
+/* animations */
+@keyframes car {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes gradient {
+  0% {
+    transform: rotate(0deg) scale(2.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(2.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(2.5);
+  }
+}
+@keyframes opening {
+  0% {
+    transform: translateX(-100vw);
+  }
+}
+
+/* mediaquery's*/
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    padding: 2px;
+  }
+  li {
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    font-size: 2rem;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  article {
+    width: 50vw;
+  }
+  .inner-article {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainImage {
+    background-position: left;
+  }
+  footer {
+    font-size: 0.75rem;
+    gap: 5vw;
+  }
+  .car {
+    width: 15vw;
+    height: 14vw;
+  }
+}
+@media (max-width: 500px) {
+  article {
+    width: 70vw;
+  }
+  .inner-article {
+    width: 60vw;
+  }
+  .car {
+    width: 25vw;
+    height: 24vw;
+  }
+  .car {
+    width: 25vw;
+    height: 24vw;
+  }
+  footer {
+    font-size: 0.6rem;
+    gap: 3vw;
+  }
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+/* end */
