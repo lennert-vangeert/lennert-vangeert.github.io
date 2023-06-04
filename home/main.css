@@ -15,6 +15,16 @@ h1 {
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-in-out;
 }
+h5 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  background: -webkit-linear-gradient(#ffffff, #5e5c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+}
 header {
   overflow: hidden;
   height: 8vh;
@@ -77,6 +87,13 @@ footer {
   align-items: center;
   border-top: white 1px solid;
 }
+
+.NR::after {
+  content: " NR";
+  color: red;
+  visibility: hidden;
+}
+
 @keyframes slide {
   100% {
     transform: translateX(100vw);
@@ -88,7 +105,15 @@ footer {
     flex-direction: column;
     top: 60vh;
   }
-
+  .NR {
+    opacity: 75%;
+  }
+  .NR::after {
+    visibility: visible;
+  }
+  h5 {
+    visibility: visible;
+  }
 }
 @media (max-width: 1100px) {
   .buttons a {
@@ -109,6 +134,9 @@ footer {
   .buttons a {
     width: 200px;
   }
+  h1 {
+    margin-top: 5vh;
+  }
 }
 @media (max-width: 400px) {
   .buttons {
@@ -126,4 +154,3 @@ footer {
     padding: 15px;
   }
 }
-
