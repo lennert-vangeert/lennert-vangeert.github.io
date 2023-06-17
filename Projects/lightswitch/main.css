@@ -1,3 +1,11 @@
+html,
+body,
+div,
+span,
+canvas {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: black;
   transition: 0.5s ease-in-out;
@@ -6,49 +14,85 @@ body {
   overflow: hidden;
 }
 #lamp {
+  z-index: 11;
   width: 150px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 }
-#turnOn {
-  background-color: rgb(234,233,71);
-}
 .buttons {
+  margin-top: 10px;
   text-align: center;
-}
-  
-.light {
-    filter: grayscale(0%);
-    transition: 0.5s ease-in-out;
-}
-.dark {
-    filter: grayscale(100%);
-    filter: brightness(10%);
-    transition: 0.5s ease-in-out;
+  z-index: 11;
 }
 
-button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 1vw;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.light {
+  filter: grayscale(0%);
   transition: 0.5s ease-in-out;
-  background-color: rgb(200, 194, 194);
 }
-button:hover {
-  background-color: rgb(234,233,71);
+.dark {
+  filter: grayscale(100%);
+  filter: brightness(10%);
   transition: 0.5s ease-in-out;
 }
 
 .body-bg-light {
-background: radial-gradient(circle, rgb(234,233,71) 0%, rgb(237, 237, 172) 20%, rgba(255, 255, 255, 0) 40%);
+  background: radial-gradient(
+    circle,
+    rgb(234, 233, 71) 0%,
+    rgb(237, 237, 172) 20%,
+    rgba(255, 255, 255, 0) 40%
+  );
 }
 .body-bg-dark {
   background-color: black;
+  background-image: url(images/star-bg.png);
+  background-size: cover;
   transition: 0.5s ease-in-out;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3.4rem;
+}
+
+.toggle input {
+  display: none;
+}
+
+.roundbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #33455e;
+  display: block;
+  transition: all 0.3s;
+  border-radius: 3.4rem;
+  cursor: pointer;
+}
+
+.roundbutton:before {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: block;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+input:checked + .roundbutton {
+  background-color: rgb(234, 199, 71);
+}
+
+input:checked + .roundbutton:before  {
+  transform: translate(2.6rem, 0);
 }
