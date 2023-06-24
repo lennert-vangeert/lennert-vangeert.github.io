@@ -11,7 +11,7 @@ body {
   background-image: linear-gradient(200deg, #444444, #222222);
   font-family: "Ubuntu", sans-serif;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 .main {
   height: 100vh;
