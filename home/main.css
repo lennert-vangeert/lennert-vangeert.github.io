@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+
+
+.hidden {
+  opacity: 0;
+}
+
+
 body {
   background-image: linear-gradient(200deg, #444444, #222222);
   font-family: "Ubuntu", sans-serif;
@@ -48,11 +56,11 @@ header span {
 }
 .buttons {
   width: 70vw;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -105,6 +113,7 @@ footer {
   .buttons {
     flex-direction: column;
     top: 65vh;
+    grid-template-columns: none;
   }
   .NR {
     opacity: 75%;
