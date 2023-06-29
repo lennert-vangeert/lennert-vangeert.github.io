@@ -48,7 +48,6 @@ header span {
 }
 .buttons {
   width: 70vw;
-  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -92,7 +91,6 @@ footer {
 .NR::after {
   content: " NR";
   color: red;
-  visibility: hidden;
 }
 /* animation */
 @keyframes slide {
@@ -106,15 +104,6 @@ footer {
     flex-direction: column;
     top: 65vh;
     grid-template-columns: none;
-  }
-  .NR {
-    opacity: 75%;
-  }
-  .NR::after {
-    visibility: visible;
-  }
-  h5 {
-    visibility: visible;
   }
 }
 @media (max-width: 800px) {
