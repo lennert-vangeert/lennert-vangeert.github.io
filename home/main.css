@@ -9,6 +9,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 h1 {
   font-size: 3rem;
   color: white;
@@ -21,13 +22,14 @@ h1 {
 }
 h5 {
   font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   text-align: center;
   background: -webkit-linear-gradient(#ffffff, #5e5c5c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease-in-out;
-  visibility: hidden;
 }
 header {
   overflow: hidden;
