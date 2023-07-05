@@ -1,0 +1,95 @@
+/*imports*/
+
+@import url("https://use.typekit.net/gpk6zlc.css");
+
+/* root */
+:root {
+
+    --herofont: "peridot-pe-variable", sans-serif;
+    --background-color: grey;
+    /* colors */
+    --white: #ffffff;
+    --black: #061920;
+
+    /* main colour */
+    --red: #fd0039;
+    --purple: #61476c;
+    --orange: #f27405;
+    --green: #009938;
+    
+    
+
+}
+
+
+/* css */
+body {
+    background-color: gray;
+}
+header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--black-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 100;
+    background-color: transparent;
+}
+
+br {
+    
+}
+header a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: Verdana, sans-serif;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: var(--herofont);
+}
+.innerhero {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    text-align: left;
+    transform: translate(-50%, -50%);
+}
+.innerhero h1 {
+    font-weight: bold;
+    font-size: 20vh;
+    height: 20vh;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+}
+.innerhero h2 {
+    position: relative;
+    color: var(--red);
+    font-size: 5vh;
+    left: 1.6vw;
+}
+.hero h1:hover {
+    text-shadow: 0 0 100px var(--red);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* animations */
+
+
+/* media querry's */
