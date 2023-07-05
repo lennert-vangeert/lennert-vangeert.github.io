@@ -4,7 +4,7 @@
 
 /* root */
 :root {
-
+    --headerfont: Verdana, sans-serif;
     --herofont: "peridot-pe-variable", sans-serif;
     --background-color: grey;
     /* colors */
@@ -40,15 +40,15 @@ header {
     padding: 0 5%;
     z-index: 100;
     background-color: transparent;
+    font-family: var(--headerfont);
 }
 
 br {
-    
+
 }
 header a {
     text-decoration: none;
     color: var(--white);
-    font-family: Verdana, sans-serif;
 }
 .hero {
     position: relative;
