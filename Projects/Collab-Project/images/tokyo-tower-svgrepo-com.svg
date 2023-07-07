@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<?xml version="1.0" encoding="iso-8859-1"?>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
-
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Tokyo - Japan</title>
-  </head>
-  <body>
-    <header>
-      <!-- <svg version="1.1" id="_x36_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="_x36_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 512 512"  xml:space="preserve">
 <g>
 	<path style="fill:#D96564;" d="M413.417,512h-73.146l-57.243-70.333h-28.615L241.683,512H171.73l-12.731-70.333h-28.615L73.146,512
@@ -41,21 +23,4 @@
 		c-0.479-3.553-0.918-7.126-1.278-10.718l0,0h20.145v-42.735h-22.262V95.644h0.006V81.576h-0.006V59.071h-20.669V0h-14.579v512
 		h35.249l12.73-70.333h28.615L340.271,512h73.146C413.417,512,345.81,441.122,295.438,337.579z"/>
 </g>
-      </svg> -->
-      <h1>Home</h1>
-      <div>
-      <a href="">Practical info</a>
-      <a href="">Must see</a>
-      <a href="">Other destinations</a>
-    </div>
-    </header>
-    <div class="hero">
-      <div class="innerhero">
-        <h1>Tokyo</h1>
-        <h2>Japan</h2>
-      </div>
-    </div>
-
-    <script src="js/index.js"></script>
-  </body>
-</html>
+</svg>
