@@ -1,0 +1,98 @@
+/*imports*/
+
+@import url("https://use.typekit.net/gpk6zlc.css");
+
+/* root */
+:root {
+    --headerfont: Verdana, sans-serif;
+    --herofont: "peridot-pe-variable", sans-serif;
+    --background-color: grey;
+    /* colors */
+    --white: #ffffff;
+    --black: #061920;
+
+    /* main colour */
+    --red: #fd0039;
+    --purple: #61476c;
+    --orange: #f27405;
+    --green: #009938;
+    
+    
+
+}
+
+
+/* css */
+body {
+    background-color: gray;
+}
+header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--black-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 100;
+    background-color: transparent;
+    font-family: var(--headerfont);
+    backdrop-filter: blur(5px);
+}
+header svg {
+    height: 50px;
+}
+header h1 {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+header a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 1.5rem;
+    transition: ease-in-out 0.2s;
+    position: relative;
+}
+header a:after {
+    position: absolute;
+    left: -1px;
+    top: 10%;
+    content: " ";
+    background: linear-gradient(
+        transparent,
+        var(--red),
+        transparent
+    );
+    width: 1px;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+header a:hover {
+    text-shadow: 0 0 10px var(--red);
+}
+header a:hover:after {
+   opacity: 100%;
+   transition: 0.2s ease-in-out;
+   animation: headerbuttons 0.5s ease-in-out forwards;
+}
+header div {
+    display: flex;
+    gap: 30px;
+}
+/* animations */
+@keyframes headerbuttons {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* media querry's */
