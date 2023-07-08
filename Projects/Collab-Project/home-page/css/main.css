@@ -4,135 +4,176 @@
 
 /* root */
 :root {
-    --headerfont: Verdana, sans-serif;
-    --herofont: "peridot-pe-variable", sans-serif;
-    --background-color: grey;
-    /* colors */
-    --white: #ffffff;
-    --black: #061920;
+  --headerfont: Verdana, sans-serif;
+  --herofont: "peridot-pe-variable", sans-serif;
+  --background-color: grey;
+  /* colors */
+  --white: #ffffff;
+  --black: #061920;
 
-    /* main colour */
-    --red: #fd0039;
-    --purple: #61476c;
-    --orange: #f27405;
-    --green: #009938;
-    
-    
-
+  /* main colour */
+  --red: #fd0039;
+  --purple: #61476c;
+  --orange: #f27405;
+  --green: #009938;
 }
-
 
 /* css */
 body {
-    background-color: gray;
+  background-color: gray;
 }
 header {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: var(--black-100);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    z-index: 100;
-    background-color: transparent;
-    font-family: var(--headerfont);
-    backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--black-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 100;
+  background-color: transparent;
+  font-family: var(--headerfont);
+  backdrop-filter: blur(5px);
 }
 header svg {
-    height: 50px;
+  height: 50px;
 }
 header h1 {
-    font-size: 1.4rem;
-    color: var(--white);
+  font-size: 1.4rem;
+  color: var(--white);
 }
 header a {
-    text-decoration: none;
-    color: var(--white);
-    padding: 8px;
-    border-radius: 1.5rem;
-    transition: ease-in-out 0.2s;
-    position: relative;
+  text-decoration: none;
+  color: var(--white);
+  padding: 8px;
+  border-radius: 1.5rem;
+  transition: ease-in-out 0.2s;
+  position: relative;
 }
 header a:after {
-    position: absolute;
-    left: -1px;
-    top: 10%;
-    content: " ";
-    background: linear-gradient(
-        transparent,
-        var(--red),
-        transparent
-    );
-    width: 1px;
-    height: 100%;
-    opacity: 0;
-    transition: 0.2s ease-in-out;
+  position: absolute;
+  left: -1px;
+  top: 10%;
+  content: " ";
+  background: linear-gradient(transparent, var(--red), transparent);
+  width: 1px;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 header a:hover {
-    text-shadow: 0 0 10px var(--red);
+  text-shadow: 0 0 10px var(--red);
 }
 header a:hover:after {
-   opacity: 100%;
-   transition: 0.2s ease-in-out;
-   animation: headerbuttons 0.5s ease-in-out forwards;
+  opacity: 100%;
+  transition: 0.2s ease-in-out;
+  animation: headerbuttons 0.5s ease-in-out forwards;
 }
 header div {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 35px;
 }
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    font-family: var(--herofont);
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: var(--herofont);
+}
+.outerhero {
+  /* display: flex; */
+  justify-content: space-between;
+  width: 80vw;
+  margin-top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 .innerhero {
-    position: absolute;
-    top: 45%;
-    left: 20%;
-    text-align: left;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(2.5px);
-    padding: 5px;
-    border-radius: 2rem;
+  text-align: left;
+  backdrop-filter: blur(5px) brightness(0.8);
+  padding: 5px;
+  border-radius: 2rem;
+  width: fit-content;
+  margin-bottom: 10px;
 }
 .innerhero h1 {
-    font-weight: bold;
-    font-size: 20vh;
-    height: 20vh;
-    text-transform: uppercase;
-    color: var(--white);
-    transition: 0.2s ease-in-out;
+  font-weight: bold;
+  font-size: 20vh;
+  height: 20vh;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: 0.2s ease-in-out;
 }
 .innerhero h2 {
-    position: relative;
-    color: var(--red);
-    font-size: 5vh;
-    left: 1.6vw;
+  position: relative;
+  color: var(--red);
+  font-size: 5vh;
+  left: 1.6vw;
 }
-
-
+.heroinfo {
+  color: var(--white);
+  height: fit-content;
+  width: 30vw;
+  padding: 10px 10px 10px 40px;
+  border-radius: 2rem;
+  backdrop-filter: blur(10px) brightness(0.8);
+position: relative;
+}
+.heroinfo p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.heroinfo span {
+    font-weight: bold;
+    color: var(--red);
+    text-transform: uppercase;
+}
+.heroinfo:after {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 30px;
+  content: " ";
+  background: linear-gradient(transparent, var(--red), transparent);
+  width: 1px;
+  height: auto;
+}
+button {
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+button:hover {
+    background-color: var(--white);
+    color: var(--red);
+    transition: 0.2s ease-in-out;
+}
+.heroinfo a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
 
 /* animations */
 @keyframes headerbuttons {
-    0% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* media querry's */
