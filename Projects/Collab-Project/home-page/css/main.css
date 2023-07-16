@@ -239,10 +239,12 @@ button:hover {
     margin-top: 20vh;
   }
   .innerhero h1 {
-    font-size: 12vh;
+    font-size: 10vh;
+    width: 80vw;
   }
   .innerhero h2 {
-    margin-top: -40px;
+    margin-top: -50px;
+    width: 70vw;
   }
   .heroinfo {
     width: 250px;
@@ -275,12 +277,15 @@ button:hover {
   .outerhero {
     width: 90vw;
   }
+  .innerhero {
+    padding: 8px;
+  }
   .innerhero h1 {
-    font-size: 10vh;
+    font-size: 8vh;
   }
   .innerhero h2 {
     font-size: 3vh;
-    margin-top: -60px;
+    margin-top: -70px;
   }
   .heroinfo {
     width: 200px;
@@ -294,5 +299,3 @@ button:hover {
     left: 20px;
   }
 }
-```
-```
