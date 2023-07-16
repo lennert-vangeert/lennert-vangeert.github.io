@@ -85,6 +85,13 @@ header div {
     display: flex;
     gap: 30px;
 }
+header .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-size: 2rem;
+}
 /* animations */
 @keyframes headerbuttons {
     0% {
