@@ -26,7 +26,6 @@
 body {
     background-image: url(../must-see/images/bg.jpg);
     background-size: cover;
-    
     transition: 0.2s ease-in-out;
 }
 header {
@@ -46,8 +45,9 @@ header {
     font-family: var(--headerfont);
     backdrop-filter: blur(5px);
 }
-header svg {
-    height: 50px;
+header img {
+    height: 40px;
+    width: auto;
 }
 header h1 {
     font-size: 1.2rem;
@@ -115,6 +115,7 @@ header div {
     padding: 5px;
     border-radius: 2rem;
     position: relative;
+    animation: slidein 0.5s ease-in-out forwards;
 }
 .content div h2 {
     text-align: center;
@@ -186,6 +187,16 @@ footer p {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+/*slide in at start of page*/
+@keyframes slidein {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
