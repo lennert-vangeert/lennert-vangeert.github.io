@@ -1,32 +1,22 @@
-var shibuya = document.getElementById('shibuya');
-var body = document.body;
+let w = document.documentElement.clientWidth || window.innerWidth;
+let navbutton = document.getElementById("navbutton");
+let navbutton2 = document.getElementById("navbutton2");
+let headerdiv = document.getElementById("headerdiv");
 
-shibuya.onmouseover = function() {
-	body.className = 'shibuya';
-}
 
-shibuya.onmouseout = function() {
-	body.className = '';
-}
 
-var shinjuku = document.getElementById('shinjuku');
-var body = document.body;
 
-shinjuku.onmouseover = function() {
-	body.className = 'shinjuku';
-}
+	if (w <= 900) {
+		navbutton.remove();
+		navbutton2.remove();
+		let img = document.createElement("img");
+		img.src = "../must-see/images/nav.svg"
+		headerdiv.appendChild(img);
+	} else {
+		document.createElement("navbutton");
+		headerdiv.appendChild(navbutton);
+		document.createElement("navbutton2");
+		headerdiv.appendChild(navbutton2);
+	}
 
-shinjuku.onmouseout = function() {
-	body.className = '';
-}
 
-var asakusa = document.getElementById('asakusa');
-var body = document.body;
-
-asakusa.onmouseover = function() {
-	body.className = 'asakusa';
-}
-
-asakusa.onmouseout = function() {
-	body.className = '';
-}
