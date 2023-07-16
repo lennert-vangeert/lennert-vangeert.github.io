@@ -39,8 +39,8 @@ header {
   font-family: var(--headerfont);
   backdrop-filter: blur(5px);
 }
-header svg {
-  height: 50px;
+header img {
+  height: 40px;
 }
 header h1 {
   font-size: 1.4rem;
@@ -121,7 +121,7 @@ header div {
 .heroinfo {
   color: var(--white);
   height: fit-content;
-  width: 30vw;
+  width: 450px;
   padding: 10px 10px 10px 40px;
   border-radius: 2rem;
   backdrop-filter: blur(10px) brightness(0.8);
@@ -177,3 +177,122 @@ button:hover {
 }
 
 /* media querry's */
+@media only screen and (max-width: 530px) {
+  header {
+    padding: 0 10%;
+  }
+  header div {
+    gap: 20px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header a {
+    padding: 5px;
+  }
+  header a:after {
+    top: 20%;
+  }
+  .outerhero {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .innerhero h1 {
+    font-size: 15vh;
+  }
+  .innerhero h2 {
+    margin-top: -15px;
+  }
+  .heroinfo {
+    width: 300px;
+    padding: 10px 10px 10px 30px;
+  }
+  .heroinfo p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .heroinfo:after {
+    left: 20px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header {
+    padding: 0 10%;
+  }
+  header div {
+    gap: 20px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header a {
+    padding: 5px;
+  }
+  header a:after {
+    top: 20%;
+  }
+  .outerhero {
+    width: 90vw;
+    margin-top: 20vh;
+  }
+  .innerhero h1 {
+    font-size: 12vh;
+  }
+  .innerhero h2 {
+    margin-top: -40px;
+  }
+  .heroinfo {
+    width: 250px;
+    padding: 10px 10px 10px 30px;
+  }
+  .heroinfo p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .heroinfo:after {
+    left: 20px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  header {
+    padding: 0 10%;
+  }
+  header div {
+    gap: 20px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header a {
+    padding: 5px;
+  }
+  header a:after {
+    top: 20%;
+  }
+  .outerhero {
+    width: 90vw;
+  }
+  .innerhero h1 {
+    font-size: 10vh;
+  }
+  .innerhero h2 {
+    font-size: 3vh;
+    margin-top: -60px;
+  }
+  .heroinfo {
+    width: 200px;
+    padding: 10px 10px 10px 30px;
+  }
+  .heroinfo p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .heroinfo:after {
+    left: 20px;
+  }
+}
+```
+```
