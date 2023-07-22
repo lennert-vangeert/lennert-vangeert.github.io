@@ -23,12 +23,12 @@ if (w <= 900) {
   headerdiv.appendChild(navbutton3);
 }
 
-// function createMenu() {
-//   if (mobilemenu.className === "mobilemenu hidden") {
-//     mobilemenu.className = "mobilemenu";
-//   } else {
-//     mobilemenu.className = "mobilemenu hidden";
-//   }
-// }
+function createMenu() {
+  if (mobilemenu.className === "mobilemenu hidden") {
+    mobilemenu.className = "mobilemenu";
+  } else {
+    mobilemenu.className = "mobilemenu hidden";
+  }
+}
 
-// btncheck.addEventListener("click", createMenu);
+btncheck.addEventListener("click", createMenu);
