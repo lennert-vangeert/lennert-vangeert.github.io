@@ -22,6 +22,29 @@
 body {
   background-color: gray;
 }
+.hidden {
+  display: none;
+}
+.mobilemenu {
+  font-family: var(--headerfont);
+  position: absolute;
+  height: 18vh;
+  width: 200px;
+  right: 0;
+  top: 10vh;
+  padding: 8px;
+  border-radius: 0 0 0 2rem;
+}
+.mobilemenu li {
+  list-style: none;
+  font-size: 15px;
+}
+.innermenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: end;
+}
 header {
   position: absolute;
   z-index: 100;
@@ -106,7 +129,7 @@ header div {
 }
 .innerhero h1 {
   font-weight: bold;
-  font-size: 20vh;
+  font-size: clamp(10vw, 20vh, 20vh);
   height: 20vh;
   text-transform: uppercase;
   color: var(--white);
@@ -125,16 +148,16 @@ header div {
   padding: 10px 10px 10px 40px;
   border-radius: 2rem;
   backdrop-filter: blur(10px) brightness(0.8);
-position: relative;
+  position: relative;
 }
 .heroinfo p {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .heroinfo span {
-    font-weight: bold;
-    color: var(--red);
-    text-transform: uppercase;
+  font-weight: bold;
+  color: var(--red);
+  text-transform: uppercase;
 }
 .heroinfo:after {
   position: absolute;
@@ -147,23 +170,23 @@ position: relative;
   height: auto;
 }
 button {
-    background-color: var(--red);
-    color: var(--white);
-    border: none;
-    border-radius: 1.5rem;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 button:hover {
-    background-color: var(--white);
-    color: var(--red);
-    transition: 0.2s ease-in-out;
+  background-color: var(--white);
+  color: var(--red);
+  transition: 0.2s ease-in-out;
 }
 .heroinfo a {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 /* animations */
@@ -177,6 +200,8 @@ button:hover {
 }
 
 /* media querry's */
+@media only screen and (max-width: 670px) {
+}
 @media only screen and (max-width: 530px) {
   header {
     padding: 0 10%;
@@ -198,13 +223,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
   .innerhero {
     width: 80vw;
   }
   .innerhero h1 {
-    font-size: 15vh;
+    font-size: 13vh;
   }
   .innerhero h2 {
     margin-top: -15px;
@@ -228,7 +252,7 @@ button:hover {
   .innerhero h2 {
     margin-top: -50px;
   }
-  }
+}
 @media only screen and (max-width: 350px) {
   header {
     padding: 0 10%;
