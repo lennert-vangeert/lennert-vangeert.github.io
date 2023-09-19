@@ -92,6 +92,61 @@ header .title {
     font-size: 1.2rem;
     font-size: 2rem;
 }
+footer {
+    margin-top: 5vh;
+    height: 20vh;
+    background-color: var(--black);
+  }
+  footer .pages {
+    display: grid;
+    align-items: center;
+    font-family: var(--headerfont);
+    margin-top: 2vh;
+  }
+  footer .socials {
+    width: 12vw;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    font-family: var(--headerfont);
+    margin-top: 2vh;
+  }
+  footer a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 1.5rem;
+    transition: ease-in-out 0.2s;
+    position: relative;
+  }
+  footer .footer-outer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  footer .pages a:after {
+    position: absolute;
+    left: -1px;
+    top: 10%;
+    content: " ";
+    background: linear-gradient(transparent, var(--red), transparent);
+    width: 1px;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+  }
+  footer .pages a:hover {
+    text-shadow: 0 0 10px var(--red);
+  }
+  footer .pages a:hover:after {
+    opacity: 100%;
+    transition: 0.2s ease-in-out;
+    animation: headerbuttons 0.5s ease-in-out forwards;
+  }
+  footer .socials a:hover {
+    scale: 1.2;
+  }
 /* animations */
 @keyframes headerbuttons {
     0% {
