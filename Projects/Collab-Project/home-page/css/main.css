@@ -44,6 +44,7 @@ body {
   flex-direction: column;
   justify-content: right;
   align-items: end;
+  text-decoration: none;
 }
 header {
   position: absolute;

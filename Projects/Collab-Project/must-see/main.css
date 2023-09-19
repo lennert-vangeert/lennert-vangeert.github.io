@@ -28,6 +28,12 @@ body {
     background-size: cover;
     transition: 0.2s ease-in-out;
 }
+.innermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+  }
 header {
     position: absolute;
     z-index: 100;
