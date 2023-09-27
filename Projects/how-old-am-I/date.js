@@ -2,19 +2,19 @@ const output = document.getElementById("output");
 const small = document.getElementById("small");
 
 const calculateAgeInDays = (date) => {
-  const today = new Date();
-  const birthDate = new Date(date);
-  const ageInDays = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24));
-  return ageInDays;
+  const today = new Date(); // get today's date
+  const birthDate = new Date(date); // get birthdate
+  const ageInDays = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24)); // calculate age in days
+  return ageInDays; // return age in days
 };
 
 output.innerHTML = `<h1> I am <span>${calculateAgeInDays(
   "2004-10-19"
 )}</span> days old</h1> 
-<small id="small"> born on 19th October 2004 </small>`;
+<small id="small"> born on 19th October 2004 </small>`; //add text to output
 
 ifBirthday = () => {
-  if (new Date().getMonth() === 9 && new Date().getDate() === 19) {
+  if (new Date().getMonth() === 9 && new Date().getDate() === 19) { // 9 is October 19 is 19th of the month
     const birthdayText = (output.innerHTML += `<big> 
        <span id="one">T</span>
        <span id="two">o</span>
@@ -33,12 +33,12 @@ ifBirthday = () => {
        <span id="fifteen">a</span>
        <span id="sixteen">y</span>
        <span id="seventeen">! </span>
-       </big>`);
-    console.log("Today's my birthday!");
-    return birthdayText;
+       </big>`); // add text to output
+    console.log("Today's my birthday!"); // log to console
+    return birthdayText;// return text
   }
 };
 
-ifBirthday();
+ifBirthday(); // run function
 
-console.log(calculateAgeInDays("2004-10-19"));
+console.log(calculateAgeInDays("2004-10-19")); // log to console
