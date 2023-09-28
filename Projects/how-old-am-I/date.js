@@ -14,7 +14,8 @@ output.innerHTML = `<h1> I am <span>${calculateAgeInDays(
 <small id="small"> born on 19th October 2004 </small>`; //add text to output
 
 ifBirthday = () => {
-  if (new Date().getMonth() === 9 && new Date().getDate() === 19) { // 9 is October 19 is 19th of the month
+  if (new Date().getMonth() + 1 === 10 && new Date().getDate() === 19) {
+    // 9 is October 19 is 19th of the month
     const birthdayText = (output.innerHTML += `<big> 
        <span id="one">T</span>
        <span id="two">o</span>
@@ -35,7 +36,7 @@ ifBirthday = () => {
        <span id="seventeen">! </span>
        </big>`); // add text to output
     console.log("Today's my birthday!"); // log to console
-    return birthdayText;// return text
+    return birthdayText; // return text
   }
 };
 
