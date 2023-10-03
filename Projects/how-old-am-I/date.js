@@ -40,7 +40,7 @@ ifBirthday = () => {
   }
 };
 ifDeath = () => {
-  if (new Date().getFullYear() >= 2094) {
+  if (new Date().getFullYear() >= 2104) {
     console.log("I'm dead probably :(")
     const birthdayText = (output.innerHTML = `<big> 
        <span id="one">I'</span>
@@ -64,7 +64,7 @@ ifDeath = () => {
 }
 
 runFunction = () => {
-  if (new Date().getFullYear() >= 2094) {
+  if (new Date().getFullYear() >= 2104) {
     ifDeath(); // run function if year equals or is greater than 2084
   } else {
     ifBirthday(); // run function if year is less than 2084
