@@ -101,6 +101,7 @@ big {
   animation-delay: 1.6s;
 }
 
+
 @keyframes colourLoop {
   0% {
     color: violet;

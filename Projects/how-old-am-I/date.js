@@ -5,7 +5,8 @@ const calculateAgeInDays = (date) => {
   const today = new Date(); // get today's date
   const birthDate = new Date(date); // get birthdate
   const ageInDays = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24)); // calculate age in days
-  return ageInDays; // return age in days
+   // calculate age in years
+  return ageInDays // return age in days and in years
 };
 
 output.innerHTML = `<h1> I am <span>${calculateAgeInDays(
@@ -15,7 +16,6 @@ output.innerHTML = `<h1> I am <span>${calculateAgeInDays(
 
 ifBirthday = () => {
   if (new Date().getMonth() + 1 === 10 && new Date().getDate() === 19) {
-    // 9 is October 19 is 19th of the month
     const birthdayText = (output.innerHTML += `<big> 
        <span id="one">T</span>
        <span id="two">o</span>
@@ -39,7 +39,37 @@ ifBirthday = () => {
     return birthdayText; // return text
   }
 };
+ifDeath = () => {
+  if (new Date().getFullYear() >= 2094) {
+    console.log("I'm dead probably :(")
+    const birthdayText = (output.innerHTML = `<big> 
+       <span id="one">I'</span>
+       <span id="two">m </span>
+       <span id="three">d</span>
+       <span id="four">e</span>
+       <span id="five">a</span>
+       <span id="six">d </span> 
+       <span id="seven">p</span>
+       <span id="eight">r</span> 
+       <span id="nine">o</span>
+       <span id="ten">b</span>
+       <span id="eleven">a</span>
+       <span id="twelve">b</span>
+       <span id="thirteen">l</span>
+       <span id="fourteen">y</span>
+       <span id="fifteen">:</span>
+       <span id="sixteen">(</span>
+       </big>`); // add text to output
+  }
+}
 
-ifBirthday(); // run function
+runFunction = () => {
+  if (new Date().getFullYear() >= 2094) {
+    ifDeath(); // run function if year equals or is greater than 2084
+  } else {
+    ifBirthday(); // run function if year is less than 2084
+  }
+}
 
-console.log(calculateAgeInDays("2004-10-19")); // log to console
+runFunction(); // run function
+
