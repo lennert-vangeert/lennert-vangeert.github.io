@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('digital-7.regular.ttf');
+   }
+body {
+    overflow: hidden;
+    background-color: rgb(107, 106, 106);
+    color: white;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.outerclock {
+    margin: 25px;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3vw;
+}
+h2 {
+    font-family: "digital-clock-font";
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+}
+br {
+    width: 5px;
+    background-color: aqua;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 5vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    .clock {
+        display: grid;
+    }
+}
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 9vw;
+    }
+    h2 {
+        font-size: 9vw;
+    }
+    .clock {
+        display: grid;
+    }
+}
