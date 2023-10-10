@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@400;700&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --pink: hsl(304, 52%, 55%);
+  --light-pink: hsl(304, 52%, 80%);
+  --blue: hsl(230, 60%, 54%);
+  --light-blue: hsl(230, 60%, 70%);
+  --yellow: hsl(39, 100%, 72%);
+  --standard-radius: 20px;
+  --small-radius: 10px;
+}
+main {
+  text-shadow: 1px 1px 1px black;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem 5rem;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+header a {
+  transition: all 0.2s ease-in-out;
+}
+header a:hover {
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h1,
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+}
+p {
+  font-family: "Lato", sans-serif;
+}
+.home-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url(../images/home-page-img/Guitar.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.inner-home-home {
+  text-align: center;
+}
+.home-home h1 {
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons a button {
+  background-color: white;
+  border-radius: var(--standard-radius);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+.buttons a button:hover {
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.buttons a:last-child {
+  margin-left: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.buttons a:last-child:hover {
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.gif {
+  height: 100vh;
+  display: flex;
+  color: orange;
+  background-attachment: fixed;
+}
+.gif-text h1,
+p {
+  margin: 0;
+}
+.gif-text {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  font-size: 150%;
+}
+@media (max-width: 1000px) {
+  .gif {
+    display: grid;
+    place-items: center;
+  }
+  .gif-text {
+    text-align: center;
+  }
+  .gif img {
+    height: 350px;
+  }
+}
+
+.airpod {
+  height: 100vh;
+  background-image: url(../images/home-page-img/airpod.png),
+    linear-gradient(hsl(230, 60%, 54%), hsl(304, 52%, 55%), hsl(39, 100%, 72%));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+.airpod-text {
+  position: absolute;
+  top: 55vh;
+  left: 25vw;
+  text-align: right;
+  width: 300px;
+}
+.airpod-text h1 {
+  font-size: 150%;
+}
+@media (max-width: 1000px) {
+  .airpod-text {
+    left: 10vw;
+  }
+}
+
+.woman {
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url(../images/home-page-img/woman-listening.png);
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.woman h1 {
+  position: absolute;
+  top: 40vh;
+  right: 10vw;
+  width: 400px;
+  font-size: 250%;
+}
+@media (max-width: 1000px) {
+  .woman {
+    background-position: right;
+  }
+}
+@media (max-width: 700px) {
+  .woman {
+    background-position: center;
+  }
+}
+@media (max-width: 500px) {
+  .woman h1 {
+    font-size: 2rem;
+    right: -5vw;
+  }
+}
