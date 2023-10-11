@@ -188,6 +188,9 @@ p {
   .inner-home-home h1 {
     font-size: 3rem;
   }
+  .gif img {
+    width: 90vw;
+  }
 }
 @media (max-width: 400px) {
   .woman h1 {
