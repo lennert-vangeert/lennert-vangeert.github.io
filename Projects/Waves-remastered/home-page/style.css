@@ -169,9 +169,41 @@ p {
     background-position: center;
   }
 }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  header div {
+    margin-top: 30px;
+  }
+}
 @media (max-width: 500px) {
   .woman h1 {
     font-size: 2rem;
     right: -5vw;
+  }
+  .inner-home-home {
+    margin: 0 1rem 0 1rem;
+  }
+  .inner-home-home h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .woman h1 {
+    font-size: 30px;
+    right: 5vw;
+    width: 80vw;
+  }
+  .airpod-text {
+    width: 80vw;
+  }
+  .gif-text {
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

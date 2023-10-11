@@ -83,3 +83,35 @@ p {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .playlists {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  header {
+    flex-direction: column;
+  }
+  header div {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+ .playlists {
+  border-top: 2px solid white;
+ } 
+ main {
+  margin: 0 1rem 0 1rem;
+}
+.playlist {
+  margin-bottom: 0;
+}
+}
