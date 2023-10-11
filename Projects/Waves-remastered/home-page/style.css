@@ -178,26 +178,24 @@ p {
   }
 }
 @media (max-width: 500px) {
-  .woman h1 {
-    font-size: 2rem;
-    right: -5vw;
-  }
-  .inner-home-home {
-    margin: 0 1rem 0 1rem;
-  }
-  .inner-home-home h1 {
-    font-size: 3rem;
-  }
   .gif img {
     width: 90vw;
   }
+  .woman h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 2vw;
+    font-size: 200%;
+    width: 90vw;
+  }
+  .woman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (max-width: 400px) {
-  .woman h1 {
-    font-size: 30px;
-    right: 5vw;
-    width: 80vw;
-  }
   .airpod-text {
     width: 80vw;
   }
