@@ -1,136 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+:root {
+  --border-radius: 15px;
+}
 body {
-  background-image: linear-gradient(200deg, #444444, #222222);
-  font-family: "Ubuntu", sans-serif;
-  overflow: hidden;
-  min-height: 100vh;
-}
-.main {
-  height: 100vh;
-  width: 100vw;
-}
-
-h1 {
-  font-size: 3rem;
-  color: white;
-  text-align: center;
-  margin-top: 10vh;
-  background: -webkit-linear-gradient(#ffffff, #5e5c5c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.3s ease-in-out;
-}
-h5 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: white;
-  text-align: center;
-  background: -webkit-linear-gradient(#ffffff, #5e5c5c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.3s ease-in-out;
+  background-color: #9d9b9b;
+  font-family: 'Inconsolata', monospace;
+  overflow-x: hidden;
 }
 header {
-  overflow: hidden;
-  height: 8vh;
-  width: 100vw;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 10px;
-}
-header span {
-  margin-left: 3rem;
-  font-size: 1.5rem;
-  animation: slide 21s linear infinite;
-  color: #d18383;
-}
-.buttons {
-  width: 70vw;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.buttons a {
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s ease-in-out;
-  margin-bottom: 10px;
-  width: 20vw;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
   text-align: center;
 }
-.buttons a span {
-  font-weight: 700;
-  color: red;
-}
-.buttons a:hover {
-  background-color: white;
-  color: #444444;
-  scale: 1.2;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 0 30px #ccc;
-}
-footer {
-  position: absolute;
-  bottom: 0;
-  height: 6vh;
-  width: 100vw;
-  color: white;
-  display: flex;
+main {
+  margin: 5vh 10vw;
+  display: grid;
   justify-content: center;
   align-items: center;
-  border-top: white 1px solid;
+  grid-template-columns: repeat(3, 1fr);
 }
-
-.NR::after {
-  content: " NR";
+a {
+  text-align: center;
+}
+.button {
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  width: 250px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button span {
+  transition: 0.1s all ease-in-out;
+  font-weight: 700;
+}
+.button:hover span {
   color: red;
-}
-/* animation */
-@keyframes slide {
-  100% {
-    transform: translateX(100vw);
-  }
-}
-/* mediaquery */
-@media (max-width: 1400px) {
-  .buttons {
-    flex-direction: column;
-    top: 65vh;
-    grid-template-columns: none;
-  }
-}
-@media (max-width: 800px) {
-  header span {
-    animation: slide 5s linear infinite;
-  }
-}
-@media (max-width: 1500px) {
-  .buttons a {
-    width: 300px;
-  }
-}
-@media (max-width: 1500px) {
-  .buttons a {
-    width: 300px;
-  }
-}
-@media (max-width: 500px) {
- .buttons a {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 320px) {
- .buttons a {
-    font-size: 1.1rem;
-  }
+
+  
 }
 
+.button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+footer {
+  padding:10vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer div:nth-child(2) {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 850px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .button {
+    padding: 0.25em 0.75em;
+  }
+}
+@media (max-width: 580px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

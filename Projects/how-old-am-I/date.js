@@ -23,8 +23,10 @@ ifBirthday = () => {
        <span id="four">a</span>
        <span id="five">y'</span>
        <span id="six">s </span> 
+       <br>
        <span id="seven">m</span>
        <span id="eight">y </span> 
+       <br>
        <span id="nine">b</span>
        <span id="ten">i</span>
        <span id="eleven">r</span>
@@ -65,9 +67,9 @@ ifDeath = () => {
 
 runFunction = () => {
   if (new Date().getFullYear() >= 2104) {
-    ifDeath(); // run function if year equals or is greater than 2084
+    ifDeath(); // run function if year equals or is greater than 2104
   } else {
-    ifBirthday(); // run function if year is less than 2084
+    ifBirthday(); // run function if year is less than 2104
   }
 }
 

@@ -104,13 +104,13 @@ big {
 
 @keyframes colourLoop {
   0% {
-    color: violet;
+    color: hsl(300, 76%, 72%);
   }
   10% {
-    color: orange;
+    color: hsl(39, 100%, 50%);
   }
   20% {
-    color: green;
+    color: hsl(120, 100%, 25%);
   }
   30% {
     color: red;
