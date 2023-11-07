@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 :root {
   --border-radius: 15px;
 }
 body {
   background-color: #9d9b9b;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Bruno Ace", cursive;
   overflow-x: hidden;
 }
 header {
