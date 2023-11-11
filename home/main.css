@@ -109,29 +109,3 @@ footer div:nth-child(2) {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-/* dark theme (there is no dark theme)*/
-
-@media (prefers-color-scheme: dark) {
-  header {
-    background-color: rgb(246, 246, 13);
-    color: black;
-    border-bottom: 2px solid black;
-  }
-  main {
-    background-color: #66c7e8;
-    background-image: radial-gradient(#212121 20%, transparent 20%);
-  }
-  .button {
-    color: #000;
-    background-position: 0 0, 50px 50px;
-    background-image: radial-gradient(#ea1414 1%, transparent 20%);
-    background-size: 5px 5px;
-  }
-  .button:hover span {
-    color: red;
-  }
-  footer a {
-    color: #fff;
-  }
-}
