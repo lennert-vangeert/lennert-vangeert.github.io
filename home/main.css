@@ -64,11 +64,7 @@ main a {
   cursor: pointer;
 }
 .button span {
-  transition: 0.1s all ease-in-out;
   font-weight: 700;
-}
-.button:hover span {
-  color: red;
 }
 
 .button:active {
