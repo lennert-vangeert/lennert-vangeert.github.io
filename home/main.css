@@ -1,3 +1,4 @@
+/* start */
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 :root {
   --border-radius: 15px;
@@ -6,6 +7,7 @@ body {
   font-family: "Bruno Ace", cursive;
   overflow-x: hidden;
 }
+/* header */
 header {
   background-color: rgb(246, 246, 13);
   color: black;
@@ -19,6 +21,7 @@ header {
   align-items: center;
   border-bottom: 2px solid black;
 }
+/* main */
 main {
   min-height: 80vh;
   background-color: #66c7e8;
@@ -33,19 +36,20 @@ main div {
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
-a {
+/* buttons */
+main a {
   text-align: center;
+  cursor: default;
 }
 .button {
   margin: 10px;
   font-family: "Open Sans", sans-serif;
-  width: 250px;
+  width: 300px;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
@@ -55,6 +59,9 @@ a {
   background-position: 0 0, 50px 50px;
   background-image: radial-gradient(#ea1414 1%, transparent 20%);
   background-size: 5px 5px;
+}
+.button:hover {
+  cursor: pointer;
 }
 .button span {
   transition: 0.1s all ease-in-out;
@@ -69,7 +76,18 @@ a {
   top: 5px;
   left: 5px;
 }
-
+/* blob */
+.blob {
+  position: absolute;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  opacity: 50%;
+  border-radius: 50%;
+  animation: animateBorderRadius 10s linear infinite;
+}
+/* footer */
 footer {
   padding: 10vw;
   display: flex;
@@ -93,19 +111,53 @@ footer div:nth-child(2) {
   display: flex;
   gap: 15px;
 }
-
-@media (max-width: 850px) {
+/* media querys */
+@media (max-width: 1000px) {
   main div {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .button {
     padding: 0.25em 0.75em;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 650px) {
   main div {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 350px) {
+  header {
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+  }
+  .button {
+    width: 250px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+  }
+}
+/* keyframes */
+@keyframes animateBorderRadius {
+  0%,
+  100% {
+    border-radius: 50%;
+  }
+
+  25% {
+    border-radius: 27% 73% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  50% {
+    border-radius: 30% 70% 69% 31% / 71% 30% 70% 29%;
+  }
+
+  75% {
+    border-radius: 70% 30% 30% 70% / 30% 70% 70% 30%;
   }
 }
