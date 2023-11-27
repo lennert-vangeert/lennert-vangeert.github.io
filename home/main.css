@@ -81,7 +81,8 @@ main a {
   background-color: red;
   opacity: 50%;
   border-radius: 50%;
-  animation: animateBorderRadius 10s linear infinite;
+  animation: animateBorderRadius 5s linear infinite;
+  display: none;
 }
 /* footer */
 footer {
