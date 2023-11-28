@@ -12,12 +12,12 @@ $btn.forEach(($btn) => {
   });
 });
 
-// const mouseLocation = (e) => {
-//     const mouseX = e.pageX-25;
-//     const mouseY = e.pageY-25;
-//     const blob = document.querySelector(".blob");
-//     blob.style.left = `${mouseX}px`;
-//     blob.style.top = `${mouseY}px`;
-//     }
+const mouseLocation = (e) => {
+    const mouseX = e.pageX-25;
+    const mouseY = e.pageY-25;
+    const blob = document.querySelector(".blob");
+    blob.style.left = `${mouseX}px`;
+    blob.style.top = `${mouseY}px`;
+    }
 
-// document.addEventListener("mousemove", mouseLocation);
+document.addEventListener("mousemove", mouseLocation);
