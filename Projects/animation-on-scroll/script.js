@@ -38,6 +38,7 @@ const setFrame = () => {
 
 const autoScroll = () => {
   clearTimeout();
+  window.scrollTo(0, 0);
   for (let i = 0; i < 1500; i++) {
     setTimeout(() => {
       window.scrollTo(0, i * 2);

@@ -56,18 +56,23 @@ section {
 button {
   position: fixed;
   bottom: 7vh;
-  left: 45vw;
-  width: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
   z-index: 70;
   border: none;
   border-radius: 5vh;
   padding: 1rem;
   transition: all 0.2s ease-in-out;
+background-color: white;
+color: black;
 }
 button:hover {
   cursor: pointer;
-  scale: 1.1;
   transition: all 0.2s ease-in-out;
+  background-color: black;
+  color: white;
+
 }
 
 .credit {
@@ -142,5 +147,17 @@ button:hover {
  
     100% {
        transform: rotate(360deg);
+    }
+ }
+
+
+ /* media query */
+ @media screen and (max-width: 350px) {
+    button {
+        width: 70vw;
+    }
+    .credit {
+      width: 100%;
+      text-align: center;
     }
  }
