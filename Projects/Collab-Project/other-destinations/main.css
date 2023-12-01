@@ -26,6 +26,29 @@
 body {
     background-color: gray;
 }
+.hidden {
+  display: none;
+}
+.mobilemenu {
+  font-family: var(--headerfont);
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: 10vh;
+  padding: 8px;
+  border-radius: 0 0 0 2rem;
+}
+.mobilemenu li {
+  list-style: none;
+  font-size: 15px;
+}
+.innermenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: end;
+  text-decoration: none;
+}
 header {
     position: absolute;
     z-index: 100;

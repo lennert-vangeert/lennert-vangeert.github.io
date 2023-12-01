@@ -28,7 +28,6 @@ body {
 .mobilemenu {
   font-family: var(--headerfont);
   position: absolute;
-  height: 18vh;
   width: 200px;
   right: 0;
   top: 10vh;
