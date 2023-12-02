@@ -141,7 +141,27 @@ button:hover {
   transform-origin: 2.25px 23.5px;
   animation: clock 12s linear infinite;
 }
-
+.nomobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background: radial-gradient(
+    circle,
+    rgb(243, 231, 211) 10%,
+    rgb(58, 57, 57) 80%
+  );
+  padding: 30px;
+  display: none;
+}
+.nomobile div {
+  text-align: center;
+}
 @keyframes clock {
   0% {
     transform: rotate(0deg);
@@ -153,12 +173,10 @@ button:hover {
 }
 
 /* media query */
-@media screen and (max-width: 350px) {
-  button {
-    width: 70vw;
+@media screen and (max-width: 800px) {
+  .nomobile {
+    display: flex;
   }
-  .credit {
-    width: 100%;
-    text-align: center;
-  }
+}
+@media screen and (max-width: 400px) {
 }

@@ -62,4 +62,6 @@ window.addEventListener("scroll", () => {
   localStorage.setItem("scrollPercent", scrollPercent);
   setFrame();
 });
+
+
 // event listener for the scroll
