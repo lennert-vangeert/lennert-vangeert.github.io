@@ -1,36 +1,34 @@
 const getBrussels = document.getElementById("brussels");
 const getNewYork = document.getElementById("newyork");
 const getTokyo = document.getElementById("tokyo");
-let twoFourHour = true;
+let twoFourHour = localStorage.getItem("twoFourHour") === "true";
 
 document.getElementById("btn").addEventListener("click", () => {
   twoFourHour = !twoFourHour;
+  localStorage.setItem("twoFourHour", twoFourHour);
   formatTime();
   updateTime();
 });
 
-
-
-
 const formatTime = (date, timeZone) => {
   let options;
-  if (twoFourHour === true) {
-  options = {
-    timeZone,
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-    hour12: false,
-  };
-} else {
-  options = {
-    timeZone,
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-    hour12: true,
-  };
-}
+  if (twoFourHour) {
+    options = {
+      timeZone,
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: false,
+    };
+  } else {
+    options = {
+      timeZone,
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    };
+  }
   return new Intl.DateTimeFormat("en-UK", options).format(date);
 };
 

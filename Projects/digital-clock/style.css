@@ -80,6 +80,9 @@ br {
     .clock {
         display: grid;
     }
+    body {
+        overflow-y: visible;
+    }
 }
 @media screen and (max-width: 350px) {
     h1 {
