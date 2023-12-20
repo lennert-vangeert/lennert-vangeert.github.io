@@ -1,97 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
-@font-face{
-    font-family:'digital-clock-font';
-    src: url('digital-7.regular.ttf');
-   }
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("digital-7.regular.ttf");
+}
 body {
-    overflow: hidden;
-    background-color: rgb(107, 106, 106);
-    color: white;
+  overflow: hidden;
+  background-color: rgb(107, 106, 106);
+  color: white;
 }
 section {
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Rubik', sans-serif;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+}
+label {
+  display: block;
+  position: relative;
+}
 body > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 button {
-
-    background-color: rgb(107, 106, 106);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Rubik', sans-serif;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 2px solid white;
-    transition: 0.5s;
+  background-color: rgb(107, 106, 106);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 0.5s;
 }
 button:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 .clock {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
 }
 .outerclock {
-    margin: 30px;
+  margin: 30px;
+}
+select {
+  background-color: rgb(107, 106, 106);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 70%;
+  min-width: 15rem;
+  appearance:none;
+  position: relative;
+  background-image: url("arrow-light.svg");
+  background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1.5rem;
+    padding-right: 2rem;
 }
 
+
+select:hover {
+  background-color: white;
+  color: black;
+  background-image: url(arrow-dark.svg);
+}
+
+
 h1 {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
 }
 h2 {
-    font-family: "digital-clock-font";
-    letter-spacing: 0.5vw;
+  font-family: "digital-clock-font";
+  letter-spacing: 0.5vw;
 }
 br {
-    width: 5px;
-    background-color: aqua;
+  width: 5px;
+  background-color: aqua;
 }
 
 @media screen and (max-width: 730px) {
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    .clock {
-        display: grid;
-    }
-    body {
-        overflow-y: visible;
-    }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .clock {
+    display: grid;
+    height: 90vh;
+  }
+  body {
+    overflow-y: visible;
+  }
 }
 @media screen and (max-width: 350px) {
-    h1 {
-        font-size: 9vw;
-    }
-    h2 {
-        font-size: 9vw;
-    }
-    .clock {
-        display: grid;
-    }
+  h1 {
+    font-size: 9vw;
+  }
+  h2 {
+    font-size: 9vw;
+  }
+  .clock {
+    display: grid;
+  }
 }
