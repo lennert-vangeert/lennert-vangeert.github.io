@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Countdown</h1>
+    </header>
+    <main>
+      <div class="title">
+        <h2>What date do you want to count down to?</h2>
+      </div>
+      <section class="inputfields">
+        <label for="date">
+          Date
+          <input id="date" name="date" type="date" />
+          <div class="alert" id="alert"></div>
+        </label>
+      </section>
+      <section class="output" id="output">
+        <div class="days">
+          <h3>Days</h3>
+          <p id="days"></p>
+        </div>
+        <div class="hours">
+          <h3>Hours</h3>
+          <p id="hours"></p>
+        </div>
+        <div class="minutes">
+          <h3>Minutes</h3>
+          <p id="minutes"></p>
+        </div>
+        <div class="seconds">
+          <h3>Seconds</h3>
+          <p id="seconds"></p>
+        </div>
+      </section>
+    </main>
+      <footer>
+        <p>Made with <span class="heart">&hearts;</span> by Lennert</p>
+      </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
