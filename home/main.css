@@ -77,6 +77,19 @@ main a {
   top: 5px;
   left: 5px;
 }
+
+.NRinfo {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
+}
 /* footer */
 footer {
   padding: 10vw;

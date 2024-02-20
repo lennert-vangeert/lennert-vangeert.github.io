@@ -18,7 +18,6 @@ const versionOneObject = () => {
 
   //Object
 
-  // Define the heart shape
   const heartShape = new THREE.Shape();
   heartShape.moveTo(2.5, 2.5);
   heartShape.bezierCurveTo(2.5, 2.5, 2.0, 0, 0, 0);
@@ -28,7 +27,6 @@ const versionOneObject = () => {
   heartShape.bezierCurveTo(8.0, 3.5, 8.0, 0, 5.0, 0);
   heartShape.bezierCurveTo(3.5, 0, 2.5, 2.5, 2.5, 2.5);
 
-  // Extrude the shape to create geometry
   const extrudeSettings = {
     depth: 1,
     bevelEnabled: true,
@@ -40,14 +38,12 @@ const versionOneObject = () => {
 
   const heartGeometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings);
   heartGeometry.center();
-  // Create a mesh using the geometry and material
   const heartMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
   const heartMesh = new THREE.Mesh(heartGeometry, heartMaterial);
 
   heartMesh.rotateX(Math.PI);
   heartMesh.position.y = 0;
 
-  // Add the mesh to the scene
   scene.add(heartMesh);
 
   //camera
@@ -74,13 +70,10 @@ const versionOneObject = () => {
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
-    // Update objects
     heartMesh.rotation.y = elapsedTime;
 
-    // Render
     renderer.render(scene, camera);
 
-    // Call tick again on the next frame
     window.requestAnimationFrame(tick);
   };
 
@@ -96,7 +89,6 @@ const versionTwoObject = () => {
 
   //Object
 
-  // Define the heart shape
   const heartShape = new THREE.Shape();
   heartShape.moveTo(2.5, 2.5);
   heartShape.bezierCurveTo(2.5, 2.5, 2.0, 0, 0, 0);
@@ -106,7 +98,6 @@ const versionTwoObject = () => {
   heartShape.bezierCurveTo(8.0, 3.5, 8.0, 0, 5.0, 0);
   heartShape.bezierCurveTo(3.5, 0, 2.5, 2.5, 2.5, 2.5);
 
-  // Extrude the shape to create geometry
   const extrudeSettings = {
     depth: 1,
     bevelEnabled: true,
@@ -118,7 +109,6 @@ const versionTwoObject = () => {
 
   const heartGeometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings);
   heartGeometry.center();
-  // Create a mesh using the geometry and material
   const heartMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
   const heartMesh = new THREE.Mesh(heartGeometry, heartMaterial);
 
@@ -149,7 +139,6 @@ const versionTwoObject = () => {
   //Animation
   const clock = new THREE.Clock();
 
-  // Define variables to keep track of mouse movement and mouse button state
   let isMouseDown = false;
   let mouseX = 0;
   let mouseY = 0;
@@ -158,13 +147,11 @@ const versionTwoObject = () => {
   const windowHalfX = window.innerWidth / 2;
   const windowHalfY = window.innerHeight / 2;
 
-  // Add event listeners to detect mouse movements and button clicks
   document.addEventListener("mousemove", onDocumentMouseMove);
   document.addEventListener("mousedown", onDocumentMouseDown);
   document.addEventListener("mouseup", onDocumentMouseUp);
 
   function onDocumentMouseMove(event) {
-    // Update mouse position only if the left mouse button is clicked
     if (isMouseDown) {
       mouseX = event.clientX - windowHalfX;
       mouseY = event.clientY - windowHalfY;
@@ -172,20 +159,17 @@ const versionTwoObject = () => {
   }
 
   function onDocumentMouseDown(event) {
-    // Check if the left mouse button is clicked
     if (event.button === 0) {
       isMouseDown = true;
     }
   }
 
   function onDocumentMouseUp(event) {
-    // Reset mouse button state when the left mouse button is released
     if (event.button === 0) {
       isMouseDown = false;
     }
   }
 
-  // Update the rotation of the scene based on mouse movement
   const updateRotation = () => {
     targetRotationX = mouseX * 0.01;
     targetRotationY = mouseY * 0.01;
@@ -195,18 +179,14 @@ const versionTwoObject = () => {
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
-    // Update rotation based on mouse movement only if the left mouse button is clicked
     if (isMouseDown) {
       updateRotation();
-      // Rotate the heartMesh based on mouse movement
       heartMesh.rotation.x += 0.05 * (targetRotationY - heartMesh.rotation.x);
       heartMesh.rotation.y += 0.05 * (targetRotationX - heartMesh.rotation.y);
     }
 
-    // Render
     renderer.render(scene, camera);
 
-    // Call tick again on the next frame
     window.requestAnimationFrame(tick);
   };
 
