@@ -9,6 +9,7 @@ const firstloc = document.getElementById("firstloc");
 const secondloc = document.getElementById("secondloc");
 const thirdloc = document.getElementById("thirdloc");
 
+
 document.getElementById("btn").addEventListener("click", () => {
   twoFourHour = !twoFourHour;
   localStorage.setItem("twoFourHour", twoFourHour);
