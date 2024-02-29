@@ -75,6 +75,7 @@ window.addEventListener("mousemove", (event) => {
 });
 const controls = new OrbitControls(camera, canvas);
 controls.enablePan = false;
+controls.enableZoom = false;
 controls.enableDamping = true;
 controls.rotateSpeed = 1.2;
 
@@ -91,6 +92,8 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
+  // rotate heart
+  heartMesh.rotation.y = elapsedTime * 1.5;
   // Update controls
   controls.update();
 
