@@ -69,7 +69,7 @@ export const earth = () => {
   controls.enableDamping = true;
   controls.rotateSpeed = 1.2;
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.5;
+  controls.autoRotateSpeed = -0.5;
 
   //Renderer
 
