@@ -76,7 +76,7 @@ export const heart = () => {
   controls.enableDamping = true;
   controls.rotateSpeed = 1.2;
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 5;
+  controls.autoRotateSpeed = 2;
 
   //Renderer
 
