@@ -5,7 +5,11 @@ export const earth = () => {
   localStorage.setItem("currentScene", "earth");
   console.log("earth");
   //canvas
-  const canvas = document.querySelector("canvas.webgl");
+  const oldCanvas = document.querySelector("canvas.webgl");
+  oldCanvas.remove();
+  const canvas = document.createElement("canvas");
+  canvas.classList.add("webgl");
+  document.body.appendChild(canvas);
 
   //scene
 

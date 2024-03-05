@@ -2,9 +2,14 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export const heart = () => {
+
   localStorage.setItem("currentScene", "heart");
   //canvas
-  const canvas = document.querySelector("canvas.webgl");
+  const oldCanvas = document.querySelector("canvas.webgl");
+  oldCanvas.remove();
+  const canvas = document.createElement("canvas");
+  canvas.classList.add("webgl");
+  document.body.appendChild(canvas);
 
   //scene
 
