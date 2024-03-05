@@ -37,3 +37,20 @@ body {
   background-color: white;
   color: black;
 }
+
+select {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+option {
+  background-color: black;
+  color: white;
+}

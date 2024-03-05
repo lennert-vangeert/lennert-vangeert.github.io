@@ -33,11 +33,22 @@ export const earth = () => {
   }
   isNighttime();
 
-  const mesh = new THREE.Mesh(
+  const earth = new THREE.Mesh(
     new THREE.SphereGeometry(5, 64, 64),
     new THREE.MeshBasicMaterial({ map })
   );
-  scene.add(mesh);
+
+  const cloudTexture = new THREE.MeshBasicMaterial({
+    map: textureLoader.load("./textures/clouds_transparent.png"),
+    transparent: true,
+  });
+  console.log(cloudTexture);
+  const clouds = new THREE.Mesh(
+    new THREE.SphereGeometry(5.05, 64, 64),
+    cloudTexture
+  );
+
+  scene.add(earth, clouds);
   //camera
   const sizes = {
     width: window.innerWidth,
@@ -50,7 +61,7 @@ export const earth = () => {
     100
   );
   camera.position.z = 12;
-  camera.lookAt(mesh.position);
+  camera.lookAt(earth.position);
   scene.add(camera);
 
   // controls
@@ -84,7 +95,8 @@ export const earth = () => {
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
-    // heartMesh.rotation.y = elapsedTime * 1.5;
+    // rotate clouds
+    clouds.rotation.y = elapsedTime * -0.02;
     // Update controls
     controls.update();
 
@@ -94,8 +106,6 @@ export const earth = () => {
     window.requestAnimationFrame(tick);
   };
   tick();
-
-  //Resize
 
   // resize
   window.addEventListener("resize", () => {

@@ -3,9 +3,9 @@ import { heart } from "./Heart.js";
 
 let currentScene;
 
-const heartBtn = document.getElementById("heart");
-const earthBtn = document.getElementById("earth");
+const select = document.getElementById("dropdown");
 
+select.value = localStorage.getItem("currentScene");
 const Launch = () => {
   if (!localStorage.getItem("currentScene")) {
     currentScene = "heart";
@@ -24,11 +24,10 @@ const Launch = () => {
 
 Launch();
 
-heartBtn.addEventListener("click", () => {
-  heart();
-});
-earthBtn.addEventListener("click", () => {
-  earth();
+select.addEventListener("change", (e) => {
+  localStorage.setItem("currentScene", e.target.value);
+  currentScene = localStorage.getItem("currentScene");
+  Launch();
 });
 
 //localstorage
