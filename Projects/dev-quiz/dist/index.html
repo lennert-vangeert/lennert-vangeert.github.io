@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Development Quiz</title>
+    <script type="module" crossorigin src="/assets/index-a66fc1e9.js"></script>
+    <link rel="stylesheet" href="/assets/index-89d72d54.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/">Quiz</a>
+      </div>
+    </header>
+    <main>
+      <section id="settings" class="settings hidden">
+        <p>
+          Welcome to the Software Development Quiz! Customize your experience by
+          choosing the difficulty, &nbsp;category, &nbsp;and number of
+          questions. Ready to test your knowledge? Click "Start Quiz" and dive
+          in!
+          <span>(carefull, there's a 10 sec timer per question)</span>
+        </p>
+        <div class="innersettings">
+          <div>
+            <label for="difficulty"
+              >Choose a difficulty:
+              <select name="difficulty" id="difficulty">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+                <option value="">any difficulty</option>
+              </select>
+            </label>
+            <label for="category"
+              >Choose a category:
+              <select name="category" id="category">
+                <option value="Linux">Linux</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Code">Code</option>
+                <option value="CMS">CMS</option>
+                <option value="Docker">Docker</option>
+                <option value="SQL">SQL</option>
+                <option value="">any category</option>
+              </select>
+            </label>
+            <label for="amount-questions"
+              >Choose the amount of questions:
+              <select name="amount-questions" id="amount-questions">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select>
+            </label>
+            <button class="start-button" id="start-button">Start quiz</button>
+          </div>
+          <img src="./headtapping-54f54adc.gif" alt="gif meme" />
+        </div>
+      </section>
+      <section id="quiz" class="quiz hidden">
+        <div class="questionnumber" id="questionnumber"></div>
+        <div class="timer" id="timer"></div>
+        <div class="question" id="question"></div>
+        <div class="answers" id="answers"></div>
+        <div class="stop">
+          <button class="stop-button" id="stop-button">Stop Quiz</button>
+        </div>
+      </section>
+      <section id="result" class="result">
+        <div class="result" id="result"></div>
+      </section>
+    </main>
+    
+  </body>
+</html>
