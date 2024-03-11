@@ -100,7 +100,7 @@ export const earth = () => {
     const elapsedTime = clock.getElapsedTime();
 
     // rotate clouds
-    clouds.rotation.y = elapsedTime * -0.02;
+    clouds.rotation.y = elapsedTime * 0.01;
     // Update controls
     controls.update();
 
