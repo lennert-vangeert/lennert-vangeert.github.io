@@ -9,7 +9,7 @@ const currentDate = new Date();
 let countdownInterval;
 
 dateInput.value =
-  localStorage.getItem("date") || "2042-04-30";
+  localStorage.getItem("date") || new Date();
 
 const setData = () => {
   const date = new Date(dateInput.value);
