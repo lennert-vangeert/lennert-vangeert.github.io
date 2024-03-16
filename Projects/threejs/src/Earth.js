@@ -58,10 +58,12 @@ export const earth = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   };
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    sizes.width / sizes.height,
-    0.1,
+  const camera = new THREE.OrthographicCamera(
+    sizes.width / -100,
+    sizes.width / 100,
+    sizes.height / 100,
+    sizes.height / -100,
+    1,
     100
   );
   camera.position.z = 12;
@@ -85,7 +87,8 @@ export const earth = () => {
   controls.rotateSpeed = 1.2;
   controls.autoRotate = true;
   controls.autoRotateSpeed = -0.5;
-
+  controls.maxZoom = 10;
+  controls.minZoom = 1;
   //Renderer
 
   const renderer = new THREE.WebGLRenderer({
@@ -113,12 +116,15 @@ export const earth = () => {
 
   // resize
   window.addEventListener("resize", () => {
+    // Update sizes
     sizes.width = window.innerWidth;
     sizes.height = window.innerHeight;
 
+    // Update camera
     camera.aspect = sizes.width / sizes.height;
     camera.updateProjectionMatrix();
 
+    // Update renderer
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   });
