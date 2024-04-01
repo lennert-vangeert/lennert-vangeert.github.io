@@ -121,7 +121,15 @@ export const earth = () => {
     sizes.height = window.innerHeight;
 
     // Update camera
-    camera.aspect = sizes.width / sizes.height;
+    const aspectRatio = sizes.width / sizes.height;
+    const zoom = 15; 
+    const halfWidth = (zoom * aspectRatio) / 2;
+    const halfHeight = zoom / 2;
+
+    camera.left = -halfWidth;
+    camera.right = halfWidth;
+    camera.top = halfHeight;
+    camera.bottom = -halfHeight;
     camera.updateProjectionMatrix();
 
     // Update renderer
