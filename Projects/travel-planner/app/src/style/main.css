@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+
+:root {
+  --main-font: "Open Sans", sans-serif;
+
+
+  --main-blue: #05f5f5;
+  --light-blue: hsl(180, 100%, 95%);
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}

@@ -1,0 +1,47 @@
+.CountryCard {
+  width: 250px;
+  height: 350px;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  background: linear-gradient(to right, rgb(228, 11, 11), rgb(244, 161, 6));
+}
+.CountryCard__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  border-radius: 0.5rem;
+  padding: 16px;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1c1c;
+  color: #fff;
+}
+
+.CountryCard__image {
+  width: 100%;
+  height: 125px;
+  object-fit: contain;
+}
+
+.CountryCard:hover .CountryCard__inner {
+  animation: hover 0.5s forwards;
+  cursor: pointer;
+}
+
+@keyframes hover {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.02;
+  }
+}
