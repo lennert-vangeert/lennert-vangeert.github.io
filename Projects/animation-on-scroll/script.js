@@ -1,67 +1,68 @@
-// Add your JavaScript code here
-const $screen = document.getElementById("screen");
-const $btn = document.getElementById("btn");
-const $head = document.querySelector("head");
-let scrollPercent = 0;
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+const frameCount = 148;
+const html = document.documentElement;
 
-const initHead = () => {
-  for (let i = 0; i < 201; i++) {
-    const $link = document.createElement("link");
-    $link.rel = "preload";
-    $link.href = `frames/${i}.png`;
-    $link.as = "image";
-    $head.appendChild($link);
+const currentFrame = index => (
+  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+);
+
+const preloadImages = () => {
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
   }
 };
-initHead();
-// initializes the head and preloads all the images
 
+const img = new Image();
+img.src = currentFrame(1);
 
-if (localStorage.getItem("scrollPercent")) {
-  window.scrollTo(0, localStorage.getItem("scrollPercent"));
-} else {
-  window.scrollTo(0, 0);
+function updateCanvasSize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
-// if the user has scrolled before, scroll to that position, otherwise scroll to the top
 
-const getScrollPercent = () => {
-  const h = document.documentElement;
-  const b = document.body;
-  const st = "scrollTop";
-  const sh = "scrollHeight";
-  return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-};
-// gets the scroll percentage of the page
+function drawImage() {
+  const aspectRatio = img.width / img.height;
+  let drawWidth = canvas.width;
+  let drawHeight = canvas.height;
 
-const setFrame = () => {
-  $screen.style.backgroundImage = `url(frames/${Math.floor(
-    scrollPercent * 2
-  )}.png)`;
-  console.log(scrollPercent * 2);
-};
-// sets the frame of the animation according to the scroll percentage
-
-const autoScroll = () => {
-  clearTimeout();
-  window.scrollTo(0, 0);
-  for (let i = 0; i < 1500; i++) {
-    setTimeout(() => {
-      window.scrollTo(0, i * 2);
-    }, 4 * i);
+  if (canvas.width / canvas.height > aspectRatio) {
+    drawWidth = canvas.height * aspectRatio;
+  } else {
+    drawHeight = canvas.width / aspectRatio;
   }
-};
-// sets the scrolllocation to 0, 0 and scrolls the page to the bottom
 
-$btn.addEventListener("click", () => {
-  autoScroll();
+  const xOffset = (canvas.width - drawWidth) / 2;
+  const yOffset = (canvas.height - drawHeight) / 2;
+
+  context.drawImage(img, xOffset, yOffset, drawWidth, drawHeight);
+}
+
+function updateImage(index) {
+  img.src = currentFrame(index);
+  img.onload = drawImage;
+}
+
+function handleResize() {
+  updateCanvasSize();
+  drawImage();
+}
+
+window.addEventListener('scroll', () => {  
+  const scrollTop = html.scrollTop;
+  const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(
+    frameCount - 1,
+    Math.ceil(scrollFraction * frameCount)
+  );
+  
+  requestAnimationFrame(() => updateImage(frameIndex + 1));
 });
-// event listener for the button
 
-window.addEventListener("scroll", () => {
-  scrollPercent = Math.round(getScrollPercent());
-  localStorage.setItem("scrollPercent", scrollPercent);
-  setFrame();
-});
+window.addEventListener('resize', handleResize);
 
-
-// event listener for the scroll
+preloadImages();
+updateCanvasSize();
+updateImage(1);
