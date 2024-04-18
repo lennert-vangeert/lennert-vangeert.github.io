@@ -12,7 +12,6 @@ export const earth = () => {
   document.body.appendChild(canvas);
 
   //scene
-
   const scene = new THREE.Scene();
 
   //Object
