@@ -3,9 +3,10 @@ const context = canvas.getContext("2d");
 const frameCount = 148;
 const html = document.documentElement;
 
-const currentFrame = index => (
-  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-);
+const currentFrame = (index) =>
+  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
+    .toString()
+    .padStart(4, "0")}.jpg`;
 
 const preloadImages = () => {
   for (let i = 1; i < frameCount; i++) {
@@ -49,7 +50,7 @@ function handleResize() {
   drawImage();
 }
 
-window.addEventListener('scroll', () => {  
+window.addEventListener("scroll", () => {
   const scrollTop = html.scrollTop;
   const maxScrollTop = html.scrollHeight - window.innerHeight;
   const scrollFraction = scrollTop / maxScrollTop;
@@ -57,18 +58,15 @@ window.addEventListener('scroll', () => {
     frameCount - 1,
     Math.ceil(scrollFraction * frameCount)
   );
-  
+
   requestAnimationFrame(() => updateImage(frameIndex + 1));
 });
 
-window.addEventListener('resize', handleResize);
+window.addEventListener("resize", handleResize);
 
 preloadImages();
 updateCanvasSize();
 updateImage(1);
-
-
-
 setTimeout(() => {
   document.getElementById("container").style.opacity = "0";
 }, 3000);

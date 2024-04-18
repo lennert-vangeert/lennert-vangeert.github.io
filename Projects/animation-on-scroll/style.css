@@ -28,7 +28,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
-  opacity: .8;
+  opacity: 0.8;
 }
 .scroll {
   width: 50px;
@@ -64,6 +64,10 @@ a {
     opacity: 0;
     top: 60px;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* https://codepen.io/TKS31/pen/gOaKaxx */
