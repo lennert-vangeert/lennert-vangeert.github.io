@@ -66,3 +66,9 @@ window.addEventListener('resize', handleResize);
 preloadImages();
 updateCanvasSize();
 updateImage(1);
+
+
+
+setTimeout(() => {
+  document.getElementById("container").style.opacity = "0";
+}, 3000);

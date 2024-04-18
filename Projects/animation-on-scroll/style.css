@@ -22,3 +22,48 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
+.container {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: .8;
+}
+.scroll {
+  width: 50px;
+  height: 90px;
+  border: 3px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: scroll 2s infinite;
+  }
+}
+
+@keyframes scroll {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+@-webkit-keyframes scroll {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+/* https://codepen.io/TKS31/pen/gOaKaxx */
