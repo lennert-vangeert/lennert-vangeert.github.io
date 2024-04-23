@@ -91,7 +91,7 @@
   --yellow-100: #262816;
 }
 body {
-  font-family: "main-font", sans-serif;
+  font-family: "main-font-normal", sans-serif;
   background-color: var(--khaki-100);
   color: var(--gray-1300);
   overflow-y: hidden;
