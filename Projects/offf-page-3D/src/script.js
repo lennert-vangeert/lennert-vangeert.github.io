@@ -208,7 +208,6 @@ let previousTime = 0;
 
 const tick = () => {
   if (suitcase) {
-    console.log(suitcase);
     animationObject.actions.suitcase.forEach((action) => {
       action.play();
     });
