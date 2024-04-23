@@ -1,14 +1,14 @@
 @font-face {
   font-family: "main-font-thick";
-  src: url(./fonts/thick.woff2);
+  src: url(./fonts/thick.ttf);
 }
 @font-face {
   font-family: "main-font-normal";
-  src: url(./fonts/normal.woff2);
+  src: url(./fonts/normal.ttf);
 }
 @font-face {
   font-family: "main-font-thin";
-  src: url(./fonts/thin.woff2);
+  src: url(./fonts/thin.ttf);
 }
 
 :root {
