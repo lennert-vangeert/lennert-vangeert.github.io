@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "main-font-thick";
+  src: url(./fonts/thick.woff2);
+}
+@font-face {
+  font-family: "main-font-normal";
+  src: url(./fonts/normal.woff2);
+}
+@font-face {
+  font-family: "main-font-thin";
+  src: url(./fonts/thin.woff2);
+}
+
+:root {
+  /* Khaki */
+  --khaki-100: #d1ccb8;
+
+  /* Gray */
+  --gray-100: #ffffff;
+  --gray-200: #d0d5d7;
+  --gray-300: #d5d4d1;
+  --gray-400: #cdcdd0;
+  --gray-500: #cccccc;
+  --gray-600: #b2b2b2;
+  --gray-700: #717171;
+  --gray-800: #6a6662;
+  --gray-900: #666666;
+  --gray-1000: #5f6360;
+  --gray-1100: #5d5d61;
+  --gray-1200: #595651;
+  --gray-1300: #595550;
+  --gray-1400: #4d4d4d;
+  --gray-1500: #2d2b29;
+  --gray-1600: #242323;
+  --gray-1700: #1d1d1b;
+  --gray-1800: #080808;
+  --gray-1900: #040504;
+  --gray-2000: #000000;
+
+  /* Blue */
+  --blue-100: #3899ec;
+  --blue-200: #116dff;
+  --blue-300: #2b5672;
+
+  /* Bluish cyan */
+  --bluishCyan-100: #4eb7f5;
+  --bluishCyan-200: #43555c;
+  --bluishCyan-300: #142a33;
+
+  /* Cyan */
+  --cyan-100: #66cac5;
+  --cyan-200: #00ffff;
+
+  /* Crimson */
+  --crimson-100: #ff00a2;
+
+  /* Scarlet red */
+  --scarletRed-100: #f3aaab;
+
+  /* Blue violet */
+  --blueViolet-100: #5e97ff;
+
+  /* Red */
+  --red-100: #ff4040;
+  --red-200: #e03939;
+
+  /* Scarlet */
+  --scarlet-100: #ea32a0;
+
+  /* Olive */
+  --olive-100: #92c941;
+  --olive-200: #7fff00;
+
+  /* Purple */
+  --purple-100: #d1b1e8;
+  --purple-200: #9c58e9;
+
+  /* Green */
+  --green-100: #c1f0c1;
+
+  /* Greenish cyan */
+  --greenishCyan-100: #58ae9b;
+
+  /* Orange */
+  --orange-100: #9f774d;
+
+  /* Teal */
+  --teal-100: #05ad45;
+
+  /* Yellow */
+  --yellow-100: #262816;
+}
+body {
+  font-family: "main-font", sans-serif;
+  background-color: var(--khaki-100);
+  color: var(--gray-1300);
+  overflow-y: hidden;
+}
+.hidden {
+  display: none;
+}
+.underline {
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+/* 
+Header
+*/
+header * {
+  color: var(--gray-1300);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+.header__button-primary {
+  border: none;
+  background-color: var(--cyan-200);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+}
+.header__button-secondary {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.header__left {
+  display: flex;
+  gap: 15px;
+}
+.header__right {
+  font-family: "main-font-thick";
+  gap: 1rem;
+}
+.header__right * {
+  margin-left: 0.5rem;
+}
+.header__left p {
+  font-size: 1rem;
+}
+.header__logo {
+  margin-top: 10px;
+  width: 150px;
+  fill: var(--gray-1300);
+}
+
+/* 
+Main info 
+*/
+
+.main__info {
+  margin: 10rem 2rem 0 2rem;
+  display: flex;
+  font-family: "main-font-thick";
+}
+
+.main__info-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 80%;
+}
+.description {
+  width: 100%;
+}
+
+.title__name {
+  font-family: "main-font-thin";
+  color: var(--gray-1300);
+  font-size: 12rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.parapgraphs__container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.main_info-paragraph {
+  margin-top: 0.75rem;
+  min-width: 150px;
+}
+.description__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.description__buttons button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  color: var(--gray-1300);
+  transition: color 0.3s ease-in-out;
+}
+.buttons__title {
+  margin: 1rem 0 0.5rem 0;
+}
+.description__buttons button:hover {
+  color: var(--cyan-200);
+  transition: color 0.3s ease-in-out;
+}
+
+.gui {
+  position: fixed;
+  bottom: 3vh;
+  right: 3vw;
+}
+
+/* 
+media query 
+*/
+@media screen and (max-width: 1300px) {
+  .main__info {
+    margin: 5rem 2rem 0 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__info-text {
+    width: 100%;
+  }
+  body {
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gui {
+    display: none;
+  }
+  .main__info-text {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .header__left div {
+    display: none;
+  }
+  .title__name {
+    font-size: 20vw;
+  }
+}
