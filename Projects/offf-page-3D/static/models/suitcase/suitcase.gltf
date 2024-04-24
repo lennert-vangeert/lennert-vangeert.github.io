@@ -198,9 +198,9 @@
 			"name":"Cylinder.002Action",
 			"samplers":[
 				{
-					"input":47,
+					"input":44,
 					"interpolation":"LINEAR",
-					"output":48
+					"output":47
 				}
 			]
 		},
@@ -219,7 +219,7 @@
 				{
 					"input":44,
 					"interpolation":"LINEAR",
-					"output":49
+					"output":48
 				}
 			]
 		}
@@ -815,23 +815,11 @@
 		{
 			"bufferView":47,
 			"componentType":5126,
-			"count":119,
-			"max":[
-				4.958333333333333
-			],
-			"min":[
-				0.041666666666666664
-			],
-			"type":"SCALAR"
-		},
-		{
-			"bufferView":48,
-			"componentType":5126,
-			"count":119,
+			"count":120,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":49,
+			"bufferView":48,
 			"componentType":5126,
 			"count":120,
 			"type":"VEC3"
@@ -1119,23 +1107,18 @@
 		},
 		{
 			"buffer":0,
-			"byteLength":476,
+			"byteLength":1440,
 			"byteOffset":1007408
 		},
 		{
 			"buffer":0,
-			"byteLength":1428,
-			"byteOffset":1007884
-		},
-		{
-			"buffer":0,
 			"byteLength":1440,
-			"byteOffset":1009312
+			"byteOffset":1008848
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":1010752,
+			"byteLength":1010288,
 			"uri":"suitcase.bin"
 		}
 	]
