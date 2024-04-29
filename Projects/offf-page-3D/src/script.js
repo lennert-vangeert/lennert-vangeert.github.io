@@ -4,6 +4,7 @@ import GUI, { Controller } from "lil-gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import gsap from "gsap";
 
+
 /**
  * Base
  */
