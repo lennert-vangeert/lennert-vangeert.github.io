@@ -1,0 +1,57 @@
+{
+    "timezones": [
+        {
+            "timezone": "Europe/London",
+            "city": "London (GMT)"
+          },
+          {
+            "timezone": "Europe/Paris",
+            "city": "Paris (GMT +1)"
+          },
+          {
+            "timezone": "Europe/Moscow",
+            "city": "Moscow (GMT +3)"
+          },
+          {
+            "timezone": "Asia/Dubai",
+            "city": "Dubai (GMT +4)"
+          },
+          {
+            "timezone": "Asia/Kolkata",
+            "city": "Mumbai (GMT +5:30)"
+          },
+          {
+            "timezone": "Asia/Shanghai",
+            "city": "Shanghai (GMT +8)"
+          },
+          {
+            "timezone": "Asia/Tokyo",
+            "city": "Tokyo (GMT +9)"
+          },
+          {
+            "timezone": "Australia/Sydney",
+            "city": "Sydney (GMT +10)"
+          },
+          {
+            "timezone": "Pacific/Auckland",
+            "city": "Auckland (GMT +12)"
+          },
+          {
+            "timezone": "Pacific/Honolulu",
+            "city": "Honolulu (GMT -10)"
+          },
+          {
+            "timezone": "America/Los_Angeles",
+            "city": "Los Angeles (GMT -7)"
+          },
+          {
+            "timezone": "America/Chicago",
+            "city": "Chicago (GMT -5)"
+          },
+          {
+            "timezone": "America/New_York",
+            "city": "New York (GMT -4)"
+          }
+    ]
+  }
+  

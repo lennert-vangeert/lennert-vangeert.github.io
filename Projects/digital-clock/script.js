@@ -8,7 +8,25 @@ const inputthree = document.getElementById("inputthree");
 const firstloc = document.getElementById("firstloc");
 const secondloc = document.getElementById("secondloc");
 const thirdloc = document.getElementById("thirdloc");
+let data;
+const initDom = async () => {
+  /*{
+        "timezone": "Europe/London",
+        "city": "London (GMT)"
+      }, */
+  const response = await fetch("timezones.json");
+  data = await response.json();
+  data.timezones.forEach((timezone) => {
+    const option = document.createElement("option");
+    option.value = timezone.timezone;
+    option.text = timezone.city;
+    inputone.appendChild(option);
+    inputtwo.appendChild(option.cloneNode(true));
+    inputthree.appendChild(option.cloneNode(true));
+  });
+};
 
+initDom();
 
 document.getElementById("btn").addEventListener("click", () => {
   twoFourHour = !twoFourHour;
@@ -62,25 +80,31 @@ inputthree.addEventListener("change", () => {
 
 const replaceUnderScore = (string) => {
   return string.replace("_", " ");
-}
-
+};
 
 const updateTime = () => {
   const now = new Date();
-  
+
   initLocalStorage();
   const firstTime = formatTime(now, inputone.value);
   const secondTime = formatTime(now, inputtwo.value);
   const thirdTime = formatTime(now, inputthree.value);
 
-  firstloc.innerHTML = replaceUnderScore(inputone.value.split("/")[inputone.value.split("/").length - 1]);
-  secondloc.innerHTML = replaceUnderScore(inputtwo.value.split("/")[inputtwo.value.split("/").length - 1]);
-  thirdloc.innerHTML = replaceUnderScore(inputthree.value.split("/")[inputthree.value.split("/").length - 1]);
+  firstloc.innerHTML = replaceUnderScore(
+    inputone.value.split("/")[inputone.value.split("/").length - 1]
+  );
+  secondloc.innerHTML = replaceUnderScore(
+    inputtwo.value.split("/")[inputtwo.value.split("/").length - 1]
+  );
+  thirdloc.innerHTML = replaceUnderScore(
+    inputthree.value.split("/")[inputthree.value.split("/").length - 1]
+  );
   first.innerHTML = `<h2>${firstTime}</h2>`;
   second.innerHTML = `<h2>${secondTime}</h2>`;
   third.innerHTML = `<h2>${thirdTime}</h2>`;
-
 };
 
-updateTime();
+if (data) {
+  updateTime();
+}
 setInterval(updateTime, 1000);
