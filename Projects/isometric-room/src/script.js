@@ -14,12 +14,9 @@ const gui = new GUI({
 });
 
 gui.show(false);
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "h") {
-    gui.show(gui._hidden);
-  }
-});
+if ((window, location.hash === "#debug")) {
+  gui.show();
+}
 
 const debugObject = {};
 
@@ -61,6 +58,16 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
+
+/**
+ * Audio
+ */
+let playAudio = false;
+let audioPlaying = false;
+window.addEventListener("click", () => {
+  if (audioPlaying) return;
+  playAudio = true;
+});
 
 /**
  * Loaders
@@ -106,29 +113,38 @@ let animationObject = {
 };
 
 let gltf;
-gltfLoader.load("/models/isometric-room.glb", (gltf) => {
+gltfLoader.load("/models/isometric-room3.glb", (gltf) => {
   gltf.scene.traverse((child) => {
     if (child.isMesh) {
       child.material = material1;
     }
   });
-  // gltf.scene.children.find((child) => { child.name === 'naam van object').material = thee.js material name
+
   gltf.scene.children.find(
     (child) => child.name === "lantern-left-emmision"
   ).material = lanternEmissionMaterial;
+
   gltf.scene.children.find(
     (child) => child.name === "lantern-right-emmision"
   ).material = lanternEmissionMaterial;
+
   gltf.scene.children.find((child) => child.name === "candle-light").material =
     candleEmmisionMaterial;
 
-  // const circle = gltf.scene.children.find((child) => child.name === "circle");
-  // const circleTexture = textureLoader.load("/textures/circle.png");
-  // (circle.MeshBasicMaterial = new THREE.MeshBasicMaterial({
-  //   circleTexture,
-  //   transparent: true,
-  // })),
-    (mixer = new THREE.AnimationMixer(gltf.scene));
+  const circle = gltf.scene.children.find((child) => child.name === "circle");
+  if (circle && circle.isMesh) {
+    const circleTexture = textureLoader.load("/textures/circle.png");
+    circleTexture.flipY = false;
+    circleTexture.colorSpace = THREE.SRGBColorSpace;
+
+    circle.material = new THREE.MeshBasicMaterial({
+      map: circleTexture,
+      transparent: true,
+      depthWrite: false, // This ensures that the transparent parts are not rendered over by other objects
+    });
+  }
+
+  mixer = new THREE.AnimationMixer(gltf.scene);
   animationObject.actions = gltf.animations.map((animation) =>
     mixer.clipAction(animation).play()
   );
@@ -152,6 +168,10 @@ const points = [
   {
     position: new THREE.Vector3(4.31, 1.27, -3.13),
     element: document.querySelector(".point-2"),
+  },
+  {
+    position: new THREE.Vector3(-3.43, 2.58, -3.13),
+    element: document.querySelector(".point-3"),
   },
 ];
 
@@ -213,10 +233,25 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.x = 20;
 camera.position.y = 9;
 camera.position.z = 15;
-
-gui.add(camera.position, "x").min(-10).max(50).step(0.01).name("Camera X");
-gui.add(camera.position, "y").min(-10).max(50).step(0.01).name("Camera Y");
-gui.add(camera.position, "z").min(-10).max(50).step(0.01).name("Camera Z");
+const cameraLocationFolfder = gui.addFolder("Camera Location");
+cameraLocationFolfder
+  .add(camera.position, "x")
+  .min(-10)
+  .max(50)
+  .step(0.01)
+  .name("Camera X");
+cameraLocationFolfder
+  .add(camera.position, "y")
+  .min(-10)
+  .max(50)
+  .step(0.01)
+  .name("Camera Y");
+cameraLocationFolfder
+  .add(camera.position, "z")
+  .min(-10)
+  .max(50)
+  .step(0.01)
+  .name("Camera Z");
 
 const cameraFocus = new THREE.Vector3(0, 0, 0);
 // camera.lookAt(cameraFocus);
@@ -226,6 +261,7 @@ scene.add(camera);
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.enableZoom = false;
+controls.enablePan = false;
 // Set limits for horizontal (azimuthal) rotation
 controls.minAzimuthAngle = THREE.MathUtils.degToRad(-2); // -45 degrees in radians
 controls.maxAzimuthAngle = THREE.MathUtils.degToRad(90); // 45 degrees in radians
@@ -260,7 +296,6 @@ poiButton.addEventListener("click", () => {
       z: 1.2,
       duration: 1,
     });
-    controls.enablePan = false;
     controls.target = poiFocus;
     goBackButton.classList.remove("hidden");
   } else {
@@ -270,12 +305,10 @@ poiButton.addEventListener("click", () => {
       z: 15,
       duration: 1,
     });
-    controls.enablePan = true;
     goBackButton.classList.add("hidden");
   }
 });
 
-// Event listener for clicking anywhere on the screen
 goBackButton.addEventListener("click", (event) => {
   if (poiActive && event.target !== poiButton) {
     poiActive = false;
@@ -293,6 +326,7 @@ goBackButton.addEventListener("click", (event) => {
 /**
  * Animate
  */
+
 const raycaster = new THREE.Raycaster();
 
 const clock = new THREE.Clock();
@@ -332,6 +366,39 @@ const tick = () => {
       const translateX = screenPosition.x * sizes.width * 0.5;
       const translateY = -screenPosition.y * sizes.height * 0.5;
       point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+    }
+
+    if (playAudio) {
+      // Background music setup
+      const backgroundMusic = new Audio("/audio/water.mp3");
+      backgroundMusic.loop = true;
+      backgroundMusic.autoplay = true;
+      backgroundMusic.volume = 0.5;
+
+      backgroundMusic.play().catch((error) => {
+        console.error("Error playing background music:", error);
+      });
+
+      // Jumpscare sound setup
+      const jumpscareSound = new Audio("/audio/jumpscare.mp3");
+      jumpscareSound.volume = 0.5; // Adjust the volume as needed
+
+      // Function to play jumpscare sound at random intervals
+      function playJumpscareSound() {
+        // Play the jumpscare sound
+        jumpscareSound.play().catch((error) => {
+          console.error("Error playing jumpscare sound:", error);
+        });
+
+        // Schedule the next jumpscare sound to play in 1-2 minutes
+        const randomInterval = Math.random() * (120000 - 60000) + 60000; // 60000ms (1 min) to 120000ms (2 min)
+        setTimeout(playJumpscareSound, randomInterval);
+      }
+
+      // Start the first jumpscare sound
+      playJumpscareSound();
+      audioPlaying = true;
+      playAudio = false;
     }
   }
 

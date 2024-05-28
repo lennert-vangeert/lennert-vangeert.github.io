@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isometric Room - Lennert Van Geert</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button id="audio" class="hidden"></button>
     <canvas class="webgl"></canvas>
     <div class="loading-background"></div>
     <div class="loading-bar"></div>
     <div class="percentage">0 %</div>
-    <div class="point point-0 ">
-        <div class="label" id="poi-button">1</div>
-        <div class="text">Find out where i got my references</div>
+
+    <div class="point point-0">
+      <div class="label" id="poi-button">1</div>
+      <div class="text">Find out where i got my references</div>
     </div>
-    <div class="point point-1 ">
-        <div class="label">2</div>
-        <div class="text">yep... he's gone</div>
+    <div class="point point-1">
+      <div class="label">2</div>
+
+      <div class="text">
+        <h2>The wizard's demise</h2>
+        <p>
+          Alaric's quest for a utopian world drove him to madness. "All he
+          wanted was to find another world, a better world," they whispered. His
+          final spell to bridge realms shook the castle, and Alaric vanished,
+          leaving his study echoing with his lost ambition.
+        </p>
+      </div>
     </div>
-    <div class="point point-2 ">
-        <div class="label">3</div>
-        <div class="text">
-            <h2>What could be inside?</h2>
-            <p>Propably some Health or Magic points</p>
-        </div>
+    <div class="point point-2">
+      <div class="label">3</div>
+      <div class="text">
+        <h2>What could be inside?</h2>
+        <p>
+            Over time, Alaric's legend became myth. His sealed study, a place of wonder and danger, awaited new explorers. His escapades were long forgotten. But maybe adventurers would one day find his research... and continue it.
+        </p>
+      </div>
     </div>
-        <div class="go-back hidden">
-            Go back
-        </div>
+    <div class="point point-3">
+      <div class="label">4</div>
+      <div class="text">
+        <h2>Stories left untold</h2>
+        <p>
+            Alaric’s study holds books that could reshape reality. "These books contain knowledge kingdoms could only dream of. If these books were found, things in this world would change forever." Hidden spells, maps, and prophecies await discovery, holding the potential to enlighten or destroy Elaria.
+        </p>
+      </div>
+    </div>
+    <div class="go-back hidden">Go back</div>
     <p class="author">Created by Lennert van Geert</p>
     <script type="module" src="./script.js"></script>
-</body>
+  </body>
 </html>
