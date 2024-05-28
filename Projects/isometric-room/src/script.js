@@ -87,6 +87,14 @@ bakedTexture1.colorSpace = THREE.SRGBColorSpace;
  * Materials
  */
 
+const lanternEmissionMaterial = new THREE.MeshBasicMaterial({
+  color: 0xfff2ad,
+});
+
+const candleEmmisionMaterial = new THREE.MeshBasicMaterial({
+  color: 0xff531b,
+});
+
 //Baked Material
 
 const material1 = new THREE.MeshBasicMaterial({
@@ -98,31 +106,32 @@ let animationObject = {
 };
 
 let gltf;
-gltfLoader.load("/models/isometric-room.gltf", (gltf) => {
-  console.log(gltf);
-  console.log(gltf.scene.children[37].position);
+gltfLoader.load("/models/isometric-room.glb", (gltf) => {
   gltf.scene.traverse((child) => {
     if (child.isMesh) {
       child.material = material1;
     }
   });
+  // gltf.scene.children.find((child) => { child.name === 'naam van object').material = thee.js material name
+  gltf.scene.children.find(
+    (child) => child.name === "lantern-left-emmision"
+  ).material = lanternEmissionMaterial;
+  gltf.scene.children.find(
+    (child) => child.name === "lantern-right-emmision"
+  ).material = lanternEmissionMaterial;
+  gltf.scene.children.find((child) => child.name === "candle-light").material =
+    candleEmmisionMaterial;
 
-  mixer = new THREE.AnimationMixer(gltf.scene);
+  // const circle = gltf.scene.children.find((child) => child.name === "circle");
+  // const circleTexture = textureLoader.load("/textures/circle.png");
+  // (circle.MeshBasicMaterial = new THREE.MeshBasicMaterial({
+  //   circleTexture,
+  //   transparent: true,
+  // })),
+    (mixer = new THREE.AnimationMixer(gltf.scene));
   animationObject.actions = gltf.animations.map((animation) =>
     mixer.clipAction(animation).play()
   );
-
-  const summoningCircleTexture = textureLoader.load(
-    "/models/summoning circle.png"
-  );
-
-  const summoningCircleMaterial = new THREE.MeshBasicMaterial({
-    map: summoningCircleTexture,
-    transparent: true,
-  });
-  gltf.scene.children[86].material = summoningCircleMaterial;
-
-  gltf.scene.children[86];
 
   scene.add(gltf.scene);
 });
