@@ -1,0 +1,133 @@
+.basket {
+  padding: var(--main-padding);
+}
+
+.basket__title {
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.basket__titles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border-bottom: 2px solid var(--main-red);
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+.basket__list {
+  width: 100%;
+  font-family: var(--secondary-font);
+}
+.basket__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 25px;
+  border-bottom: 2px solid var(--main-red);
+  margin-top: 1rem;
+}
+.item__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.image__container {
+  display: flex;
+  gap: 15px;
+}
+.item__brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.item__price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.button__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.basket__button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  margin: auto 0;
+  border: none;
+  cursor: pointer;
+}
+.basket__button_secondary {
+  background-color: var(--white);
+  border: 2px solid var(--main-red);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete__icon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .basket__titles {
+    display: none;
+  }
+  .basket__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    border-bottom: 2px solid var(--main-red);
+    margin-top: 1rem;
+  }
+  .item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .item__brand {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .item__price {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .button__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .basket__button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem;
+    margin: auto 0;
+    border: none;
+  }
+  .basket__button_secondary {
+    background-color: var(--white);
+    border: 2px solid var(--main-red);
+    padding: 1rem;
+  }
+  .basket__item {
+    position: relative;
+  }
+  .delete__icon {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    cursor: pointer;
+  }
+}

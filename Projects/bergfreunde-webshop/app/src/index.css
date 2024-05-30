@@ -1,0 +1,45 @@
+@import url("https://use.typekit.net/tfh4ugg.css");
+
+:root {
+  /* colours */
+
+  --main-red: #cc0000;
+  --dark-grey: #2c3647;
+  --light-grey: #c7d0da;
+
+  --black: #000;
+  --white: #fff;
+
+  /* fonts */
+  --primary-font: 'mokoko', serif;
+  --secondary-font: 'verdana-pro', sans-serif;
+  --tertiary-font: "altivo", sans-serif;
+
+  /* font sizes */
+
+  /* Radii */
+
+  /* padding */
+
+  --main-padding: 0 5rem;
+}
+
+/* temporary */
+main {
+  min-height: 65vh;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  :root {
+    --main-padding: 0 2rem;
+  }
+}

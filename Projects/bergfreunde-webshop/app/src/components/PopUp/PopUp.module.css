@@ -1,0 +1,28 @@
+@keyframes fadeOut {
+  0% {
+    top: -10vh;
+  }
+  30% {
+    top: 5vh;
+  }
+  70% {
+    top: 5vh;
+  }
+  100% {
+    top: -10vh;
+  }
+}
+
+.popup {
+  font-family: var(--secondary-font);
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  padding: 10px 20px;
+  animation: fadeOut 2s forwards;
+  z-index: 1000;
+}

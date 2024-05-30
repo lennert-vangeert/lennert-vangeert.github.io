@@ -1,0 +1,44 @@
+.user {
+  font-family: var(--primary-font);
+  position: relative;
+  border-bottom: 2px solid var(--light-grey);
+  padding: 1rem;
+}
+
+.user__title {
+  font-family: var(--secondary-font);
+}
+
+.user__subtitle {
+  margin-bottom: 1rem;
+}
+
+.button__container {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.user__button {
+  background-color: var(--main-red);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--secondary-font);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.user__button:hover {
+  background-color: var(--black);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.user__exclamation {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  transform: rotate(15deg);
+}
