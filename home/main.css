@@ -79,7 +79,7 @@ main a {
 }
 
 .NRinfo {
-  position: absolute;
+  position: fixed;
   bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -89,6 +89,21 @@ main a {
   padding: 1rem;
   opacity: 0%;
   transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.APIinfo {
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
 }
 /* footer */
 footer {

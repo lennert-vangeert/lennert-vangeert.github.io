@@ -23,8 +23,10 @@
 // document.addEventListener("mousemove", mouseLocation);
 
 let nonResponsiveElements = document.querySelectorAll(".NR");
+let apiElements = document.querySelectorAll(".API");
 console.log(nonResponsiveElements);
 const nonResponsiveInfo = document.querySelector(".NRinfo");
+const apiInfo = document.querySelector(".APIinfo");
 
 for (let i = 0; i < nonResponsiveElements.length; i++) {
   nonResponsiveElements[i].addEventListener("mouseover", () => {
@@ -32,5 +34,14 @@ for (let i = 0; i < nonResponsiveElements.length; i++) {
   });
   nonResponsiveElements[i].addEventListener("mouseout", () => {
     nonResponsiveInfo.style.opacity = "0%";
+  });
+}
+
+for (let i = 0; i < apiElements.length; i++) {
+  apiElements[i].addEventListener("mouseover", () => {
+    apiInfo.style.opacity = "100%";
+  });
+  apiElements[i].addEventListener("mouseout", () => {
+    apiInfo.style.opacity = "0%";
   });
 }
