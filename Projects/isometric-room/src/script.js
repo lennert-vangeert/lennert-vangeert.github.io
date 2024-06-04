@@ -6,6 +6,13 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 
 /**
+ * Shaders
+ */
+import portalVertexShader from "./shaders/portal/vertex.glsl";
+import portalFragmentShader from "./shaders/portal/fragment.glsl";
+// Credit Niels Minne
+
+/**
  * Base
  */
 // Debug
@@ -102,6 +109,37 @@ const candleEmmisionMaterial = new THREE.MeshBasicMaterial({
   color: 0xff531b,
 });
 
+debugObject.portalColorStart = "#fae0ff";
+debugObject.portalColorEnd = "#e999ff";
+
+const portalMaterial = new THREE.ShaderMaterial({
+  vertexShader: portalVertexShader,
+  fragmentShader: portalFragmentShader,
+  uniforms: {
+    uTime: { value: 0 },
+    uColorStart: {
+      value: new THREE.Color(debugObject.portalColorStart),
+    },
+    uColorEnd: {
+      value: new THREE.Color(debugObject.portalColorEnd),
+    },
+  },
+});
+
+gui
+  .addColor(debugObject, "portalColorStart")
+  .onChange(() => {
+    portalMaterial.uniforms.uColorStart.value.set(debugObject.portalColorStart);
+  })
+  .name("Portal Color Start");
+
+gui
+  .addColor(debugObject, "portalColorEnd")
+  .onChange(() => {
+    portalMaterial.uniforms.uColorEnd.value.set(debugObject.portalColorEnd);
+  })
+  .name("Portal Color End");
+
 //Baked Material
 
 const material1 = new THREE.MeshBasicMaterial({
@@ -113,12 +151,20 @@ let animationObject = {
 };
 
 let gltf;
-gltfLoader.load("/models/isometric-room3.glb", (gltf) => {
+gltfLoader.load("/models/isometric-room-lennert-vangeert.glb", (gltf) => {
   gltf.scene.traverse((child) => {
     if (child.isMesh) {
       child.material = material1;
     }
   });
+
+  const circleChild = gltf.scene.children.find(
+    (child) => child.name === "circle"
+  );
+
+  if (circleChild) {
+    gltf.scene.remove(circleChild);
+  }
 
   gltf.scene.children.find(
     (child) => child.name === "lantern-left-emmision"
@@ -127,6 +173,13 @@ gltfLoader.load("/models/isometric-room3.glb", (gltf) => {
   gltf.scene.children.find(
     (child) => child.name === "lantern-right-emmision"
   ).material = lanternEmissionMaterial;
+
+  const portalMesh = gltf.scene.children.find(
+    (child) => child.name === "portal-floor"
+  );
+
+  portalMesh.children.find((child) => child.name === "portal-plane").material =
+    portalMaterial;
 
   gltf.scene.children.find((child) => child.name === "candle-light").material =
     candleEmmisionMaterial;
@@ -172,6 +225,10 @@ const points = [
   {
     position: new THREE.Vector3(-3.43, 2.58, -3.13),
     element: document.querySelector(".point-3"),
+  },
+  {
+    position: new THREE.Vector3(0.47, 0.77, 0.87),
+    element: document.querySelector(".point-4"),
   },
 ];
 
@@ -337,6 +394,8 @@ const tick = () => {
   previousTime = elapsedTime;
   // Update controls
   controls.update();
+
+  portalMaterial.uniforms.uTime.value = elapsedTime;
 
   if (sceneReady) {
     if (mixer) {
