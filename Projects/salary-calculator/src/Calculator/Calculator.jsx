@@ -10,6 +10,22 @@ function Exercise() {
   });
 
   const [total, setTotal] = useState(0);
+  const [hourTime, setHourTime] = useState(0);
+
+  const updateHourTime = () => {
+    // how much time has passed since the start of the hour
+    const now = new Date();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const hourTime = minutes / 60 + seconds / 3600;
+    setHourTime(hourTime);
+  };
+
+  useEffect(() => {
+    // update every second
+    const interval = setInterval(updateHourTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const workDays = 5;
   const workHours = workDays * 7.75;
@@ -60,6 +76,7 @@ function Exercise() {
 
   return (
     <div className={style.main}>
+      <img src="https://www.food.be/sites/food/files/companies/0012000000RYY8KAAX/01257000000VEN1AAO/logoinex.png" alt="" />
       <h1>Loon rekenmachine (jobstudenten)</h1>
       <form className={style.form} onSubmit={handleSubmit}>
         <label htmlFor="bruto">
@@ -116,6 +133,13 @@ function Exercise() {
         <p className={style.result}>{currencyFormatter.format(total)}</p>
         <h2>Maandelijkse loon</h2>
         <p className={style.result}>{currencyFormatter.format(total * 4)}</p>
+        <p>
+          Je hebt dit uur al{" "}
+          <span className={style.bold}>
+            {currencyFormatter.format((hourTime * total) / workHours)}
+          </span>{" "}
+          verdient
+        </p>
       </div>
     </div>
   );
