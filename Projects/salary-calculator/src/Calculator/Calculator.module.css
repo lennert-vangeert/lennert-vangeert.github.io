@@ -10,7 +10,7 @@
   max-width: 600px;
   margin: 0 auto;
   font-family: var(--font);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
