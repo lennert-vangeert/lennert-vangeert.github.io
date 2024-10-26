@@ -7,6 +7,15 @@
     width: 100%;
     text-align: center;
 }
+
+.setList {
+    display: flex;
+    align-items : center;
+    flex-direction: column;
+    gap: .3rem;
+    list-style-type: none;
+    padding: 0;
+}
 .score {
     display: flex;
     margin: 1rem 0;
@@ -47,7 +56,10 @@ h2 {
     background-color: #f1f1f1;
     cursor: pointer;
 }
-
+.red {
+    background-color: #ff0000;
+    color: white;
+}
 .button__container {
     display: flex;
     flex-direction: column;
@@ -58,4 +70,16 @@ h2 {
 .time__container {
     display: flex;
     flex-direction: column;
+}
+
+a {
+    color: inherit;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
 }
