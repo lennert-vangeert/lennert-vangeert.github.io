@@ -89,7 +89,7 @@ const Counter = () => {
   const setTimeout = () => {
     let countdownTime = 30;
     timeRef.current.disabled = true;
-    timeRef.current.style.backgroundColor = "white";
+    timeRef.current.style.backgroundColor = "#f1f1f1";
     const interval = setInterval(() => {
       countdownTime--;
       setTime(countdownTime);
