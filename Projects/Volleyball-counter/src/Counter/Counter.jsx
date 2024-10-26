@@ -102,6 +102,7 @@ const Counter = () => {
   };
 
   const nextSet = () => {
+    if (playedSets.length === 5) return;
     setPlayedSets([...playedSets, { home: homeScore, away: awayScore }]);
     setHomeScore(0);
     setAwayScore(0);
