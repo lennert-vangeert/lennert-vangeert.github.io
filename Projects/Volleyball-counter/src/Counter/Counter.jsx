@@ -179,7 +179,7 @@ const Counter = () => {
       </section>
 
       <footer>
-        Made with ❤️ by <a href="lennertvg.be">Lennert Van Geert</a>
+        Made with ❤️ by <a href="https://lennertvg.be">Lennert Van Geert</a>
       </footer>
     </>
   );

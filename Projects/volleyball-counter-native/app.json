@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "volleyball counter",
+    "slug": "volleyball-counter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/volleyball.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/volleyball.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lennertvg2004.volleyballcounter"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.lennertvg2004.volleyballcounter"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4e8a354c-f432-414a-b9e6-5dd42364f60a"
+      }
+    }
+  }
+}
