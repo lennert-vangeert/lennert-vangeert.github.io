@@ -121,7 +121,7 @@ const Counter = () => {
   };
 
   return (
-    <>
+    <main className={style.main}>
       <section>
         <h1 className={style.title}>Sets</h1>
         <ul className={style.setList}>
@@ -181,7 +181,7 @@ const Counter = () => {
       <footer>
         Made with ❤️ by <a href="https://lennertvg.be">Lennert Van Geert</a>
       </footer>
-    </>
+    </main>
   );
 };
 
