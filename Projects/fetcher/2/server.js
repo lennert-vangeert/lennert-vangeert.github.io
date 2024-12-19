@@ -8,6 +8,7 @@ const targetUrls = [
   "https://whiskerwingsleaderboard.onrender.com/leaderboard",
   "https://bergfreunde-webshop-mob2.onrender.com/products",
   "https://mobdev-1-opdracht-2-lennert-van-geert-api.onrender.com/login",
+  "https://testing-fetch-1.onrender.com"
 ]; // Replace with your actual array of URLs
 
 app.get("/", async (req, res) => {
