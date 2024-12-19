@@ -10,6 +10,7 @@ app.get("/", async (req, res) => {
 
   // Adding a 1-minute delay before triggering the fetch
   setTimeout(async () => {
+    console.log("Triggering fetch now...");
     try {
       const fetchResponse = await fetch(
         "https://testing-fetch-2.onrender.com"
@@ -29,7 +30,7 @@ app.get("/", async (req, res) => {
         error: error.message,
       });
     }
-  }, 60000); // 60000 milliseconds = 1 minute
+  }, 10000); // 60000 milliseconds = 1 minute
 });
 
 // Start Express server
